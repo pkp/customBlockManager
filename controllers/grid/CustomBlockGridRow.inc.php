@@ -27,16 +27,16 @@ class CustomBlockGridRow extends GridRow {
 	// Overridden template methods
 	//
 	/**
-	 * @see GridRow::initialize()
+	 * @copydoc GridRow::initialize()
 	 */
 	function initialize($request) {
 		parent::initialize($request);
 
 		$blockName = $this->getId();
-
 		if (!empty($blockName)) {
 			$router = $request->getRouter();
 
+			// Create the "edit custom block" action
 			import('lib.pkp.classes.linkAction.request.AjaxModal');
 			$this->addAction(
 				new LinkAction(
@@ -51,6 +51,7 @@ class CustomBlockGridRow extends GridRow {
 				)
 			);
 
+			// Create the "delete custom block" action
 			import('lib.pkp.classes.linkAction.request.RemoteActionConfirmationModal');
 			$this->addAction(
 				new LinkAction(
@@ -66,7 +67,6 @@ class CustomBlockGridRow extends GridRow {
 			);
 		}
 	}
-
 }
 
 ?>

@@ -10,7 +10,7 @@
  * @package plugins.generic.customBlockManager
  * @class CustomBlockManagerPlugin
  *
- * Plugin to let managers add and delete sidebar blocks
+ * Plugin to let managers add and delete custom sidebar blocks
  *
  */
 
@@ -18,27 +18,36 @@ import('lib.pkp.classes.plugins.GenericPlugin');
 
 class CustomBlockManagerPlugin extends GenericPlugin {
 	/**
-	 * @see Plugin::getDisplayName()
+	 * @copydoc Plugin::getDisplayName()
 	 */
 	function getDisplayName() {
 		return __('plugins.generic.customBlockManager.displayName');
 	}
 
 	/**
-	 * @see Plugin::getDescription()
+	 * @copydoc Plugin::getDescription()
 	 */
 	function getDescription() {
 		return __('plugins.generic.customBlockManager.description');
 	}
 
 	/**
-	 * @see Plugin::register()
+	 * @copydoc Plugin::register()
 	 */
 	function register($category, $path) {
 		if (parent::register($category, $path)) {
+			// If the system isn't installed, or is performing an upgrade, don't
+			// register hooks. This will prevent DB access attempts before the
+			// schema is installed.
 			if (!Config::getVar('general', 'installed') || defined('RUNNING_UPGRADE')) return true;
-			if ( $this->getEnabled() ) {
+
+			if ($this->getEnabled()) {
+				// This hook is used to step in when block plugins are registered to add
+				// each custom block that has been created with this plugin.
 				HookRegistry::register('PluginRegistry::loadCategory', array($this, 'callbackLoadCategory'));
+
+				// This hook is used to register the components this plugin implements to
+				// permit administration of custom block plugins.
 				HookRegistry::register('LoadComponentHandler', array($this, 'setupGridHandler'));
 			}
 			return true;
@@ -50,34 +59,41 @@ class CustomBlockManagerPlugin extends GenericPlugin {
 	 * Register as a block plugin, even though this is a generic plugin.
 	 * This will allow the plugin to behave as a block plugin, i.e. to
 	 * have layout tasks performed on it.
-	 * @param $hookName string
-	 * @param $args array
+	 * @param $hookName string The name of the hook being invoked
+	 * @param $args array The parameters to the invoked hook
 	 */
 	function callbackLoadCategory($hookName, $args) {
 		$category =& $args[0];
 		$plugins =& $args[1];
 		$request =& $this->getRequest();
+
 		switch ($category) {
-			case 'blocks':
+			case 'blocks': // The system is registering block plugins
 				$this->import('CustomBlockPlugin');
 
+				// Ensure that there is a context (journal or press)
 				$context = $request->getContext();
 				if (!$context) return false;
 
+				// Load the custom blocks we have created
 				$blocks = $this->getSetting($context->getId(), 'blocks');
 				if (!is_array($blocks)) break;
+
+				// Loop through each custom block and register it
 				$i=0;
 				foreach ($blocks as $block) {
 					$blockPlugin = new CustomBlockPlugin($block, $this->getName());
 
-					// default the block to being enabled
+					// Default the block to being enabled (for newly created blocks)
 					if ($blockPlugin->getEnabled() !== false) {
 						$blockPlugin->setEnabled(true);
 					}
-					// default the block to the right sidebar
+					// Default the block to the right sidebar (for newly created blocks)
 					if (!is_numeric($blockPlugin->getBlockContext())) {
 						$blockPlugin->setBlockContext(BLOCK_CONTEXT_RIGHT_SIDEBAR);
 					}
+
+					// Add the plugin to the list of registered plugins
 					$plugins[$blockPlugin->getSeq()][$blockPlugin->getPluginPath() . $i] =& $blockPlugin;
 
 					$i++;
@@ -89,9 +105,9 @@ class CustomBlockManagerPlugin extends GenericPlugin {
 	}
 
 	/**
-	 * Set up the pixel tags grid handler.
-	 * @param $hookName string
-	 * @param $params array
+	 * Permit requests to the custom block grid handler
+	 * @param $hookName string The name of the hook being invoked
+	 * @param $args array The parameters to the invoked hook
 	 */
 	function setupGridHandler($hookName, $params) {
 		$component =& $params[0];
@@ -103,7 +119,7 @@ class CustomBlockManagerPlugin extends GenericPlugin {
 	}
 
 	/**
-	 * @see GenericPlugin::getManagementVerbs()
+	 * @copydoc GenericPlugin::getManagementVerbs()
 	 */
 	function getManagementVerbs() {
 		$verbs = parent::getManagementVerbs();
@@ -114,7 +130,7 @@ class CustomBlockManagerPlugin extends GenericPlugin {
 	}
 
 	/**
-	 * @see Plugin::getManagementVerbLinkAction()
+	 * @copydoc Plugin::getManagementVerbLinkAction()
 	 */
 	function getManagementVerbLinkAction($request, $verb) {
 		$router = $request->getRouter();
@@ -122,6 +138,7 @@ class CustomBlockManagerPlugin extends GenericPlugin {
 		list($verbName, $verbLocalized) = $verb;
 
 		if ($verbName === 'manageCustomBlocks') {
+			// Generate a link action for the "manage" action
 			import('lib.pkp.classes.linkAction.request.AjaxLegacyPluginModal');
 			$actionRequest = new AjaxLegacyPluginModal(
 					$router->url($request, null, null, 'plugin', null, array('verb' => 'manageCustomBlocks', 'plugin' => $this->getName(), 'category' => 'generic')),
@@ -134,13 +151,12 @@ class CustomBlockManagerPlugin extends GenericPlugin {
 	}
 
 	/**
-	 * @see GenericPlugin::manage()
+	 * @copydoc GenericPlugin::manage()
 	 */
 	function manage($verb, $args, &$message, &$messageParams, &$pluginModalContent = null) {
-		if (!parent::manage($verb, $args, $message, $messageParams)) return false;
-		$request =& $this->getRequest();
 		switch ($verb) {
 			case 'manageCustomBlocks':
+				$request =& $this->getRequest();
 				$templateMgr = TemplateManager::getManager($request);
 				$templateMgr->register_function('plugin_url', array($this, 'smartyPluginUrl'));
 				import('lib.pkp.classes.form.Form');
@@ -148,9 +164,7 @@ class CustomBlockManagerPlugin extends GenericPlugin {
 				$pluginModalContent = $form->fetch($request);
 				return true;
 			default:
-				// Unknown management verb
-				assert(false);
-				return false;
+				return parent::manage($verb, $args, $message, $messageParams);
 		}
 	}
 }

@@ -17,6 +17,7 @@
 import('lib.pkp.classes.plugins.BlockPlugin');
 
 class CustomBlockPlugin extends BlockPlugin {
+	/** @var string Name of this block plugin */
 	var $blockName;
 
 	/** @var string Name of parent plugin */
@@ -24,6 +25,8 @@ class CustomBlockPlugin extends BlockPlugin {
 
 	/**
 	 * Constructor
+	 * @param $blockName string Name of this block plugin.
+	 * @param $parentPluginName string Name of block plugin management plugin.
 	 */
 	function CustomBlockPlugin($blockName, $parentPluginName) {
 		$this->blockName = $blockName;
@@ -33,21 +36,21 @@ class CustomBlockPlugin extends BlockPlugin {
 
 	/**
 	 * Get the management plugin
-	 * @return object
+	 * @return CustomBlockManagerPlugin
 	 */
 	function &getManagerPlugin() {
 		return PluginRegistry::getPlugin('generic', $this->parentPluginName);
 	}
 
 	/**
-	 * @see Plugin::getName()
+	 * @copydoc Plugin::getName()
 	 */
 	function getName() {
 		return $this->blockName;
 	}
 
 	/**
-	 * @see Plugin::getPluginPath()
+	 * @copydoc Plugin::getPluginPath()
 	 */
 	function getPluginPath() {
 		$plugin =& $this->getManagerPlugin();
@@ -55,7 +58,7 @@ class CustomBlockPlugin extends BlockPlugin {
 	}
 
 	/**
-	 * @see Plugin::getTemplatePath()
+	 * @copydoc Plugin::getTemplatePath()
 	 */
 	function getTemplatePath() {
 		$plugin =& $this->getManagerPlugin();
@@ -63,14 +66,14 @@ class CustomBlockPlugin extends BlockPlugin {
 	}
 
 	/**
-	 * @see Plugin::getHideManagement()
+	 * @copydoc Plugin::getHideManagement()
 	 */
 	function getHideManagement() {
 		return true;
 	}
 
 	/**
-	 * @see LazyLoadPlugin::getEnabled()
+	 * @copydoc LazyLoadPlugin::getEnabled()
 	 */
 	function getEnabled() {
 		if (!Config::getVar('general', 'installed')) return true;
@@ -78,26 +81,28 @@ class CustomBlockPlugin extends BlockPlugin {
 	}
 
 	/**
-	 * @see Plugin::getDisplayName()
+	 * @copydoc Plugin::getDisplayName()
 	 */
 	function getDisplayName() {
 		return $this->blockName . ' ' . __('plugins.generic.customBlock.nameSuffix');
 	}
 
 	/**
-	 * @see Plugin::getDescription()
+	 * @copydoc Plugin::getDescription()
 	 */
 	function getDescription() {
 		return __('plugins.generic.customBlock.description');
 	}
 
 	/**
-	 * @see BlockPlugin::getContents()
+	 * @copydoc BlockPlugin::getContents()
 	 */
 	function getContents(&$templateMgr, $request = null) {
+		// Ensure that we're dealing with a request with context
 		$context = $request->getContext();
 		if (!$context) return '';
 
+		// Get the block contents.
 		$customBlockContent = $this->getSetting($context->getId(), 'blockContent');
 		$currentLocale = AppLocale::getLocale();
 		$divCustomBlockId = 'customblock-'.preg_replace('/\W+/', '-', $this->getName());
@@ -108,7 +113,7 @@ class CustomBlockPlugin extends BlockPlugin {
 	}
 
 	/**
-	 * @see BlockPlugin::getBlockContext()
+	 * @copydoc BlockPlugin::getBlockContext()
 	 */
 	function getBlockContext() {
 		if (!Config::getVar('general', 'installed')) return BLOCK_CONTEXT_RIGHT_SIDEBAR;
@@ -116,7 +121,7 @@ class CustomBlockPlugin extends BlockPlugin {
 	}
 
 	/**
-	 * @see BlockPlugin::getSeq()
+	 * @copydoc BlockPlugin::getSeq()
 	 */
 	function getSeq() {
 		if (!Config::getVar('general', 'installed')) return 1;

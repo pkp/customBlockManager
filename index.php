@@ -1,4 +1,5 @@
 <?php
+
 /**
  * @defgroup plugins_generic_customBlockManager Custom Block Manager Plugin
  */
