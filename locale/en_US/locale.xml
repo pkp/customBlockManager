@@ -16,7 +16,7 @@
 	<message key="plugins.generic.customBlockManager.manage">Manage Custom Blocks</message>
 	<message key="plugins.generic.customBlockManager.description">This Plugin lets you manage (add, edit and delete) the custom sidebar blocks.</message>
 	<message key="plugins.generic.customBlockManager.customBlocks">Custom Blocks</message>	
-	<message key="plugin.generic.customBlockManager.introduction">You can use this plugin to manage (add, edit and delete) the custom block plugins. To place your custom block plugin in the desired location in the sidebar, go to the Management > Website Settings > Appereance > Layout > Sidebar Management.</message>
+	<message key="plugins.generic.customBlockManager.introduction">You can use this plugin to manage (add, edit and delete) the custom block plugins. To place your custom block plugin in the desired location in the sidebar, go to the Management > Website Settings > Appereance > Layout > Sidebar Management.</message>
 	<message key="plugins.generic.customBlockManager.blockName">Block Name</message>
 	<message key="plugins.generic.customBlockManager.addBlock">Add Block</message>	
 	<message key="plugins.generic.customBlockManager.noneCreated">No custom block plugins have been created.</message>	

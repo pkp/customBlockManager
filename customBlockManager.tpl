@@ -1,11 +1,11 @@
 {**
- * plugins/generic/customBlockManager/settingsForm.tpl
+ * plugins/generic/customBlockManager/customBlockManager.tpl
  *
  * Copyright (c) 2014 Simon Fraser University Library
  * Copyright (c) 2003-2014 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
- * Custom Block Manager -- CustomBlockGrid.
+ * Custom Block Manager -- displays the CustomBlockGrid.
  *
  *}
 {url|assign:customBlockGridUrl router=$smarty.const.ROUTE_COMPONENT component="plugins.generic.customBlockManager.controllers.grid.CustomBlockGridHandler" op="fetchGrid" escape=false}
