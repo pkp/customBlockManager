@@ -19,10 +19,7 @@
 <form class="pkp_form" id="customBlockForm" method="post" action="{$actionUrl}">
 	{fbvFormArea id="customBlocksFormArea" class="border"}
 		{fbvFormSection}
-			{if $blockName}
-				{assign var="readonly" value=true}
-			{/if}
-			{fbvElement type="text" label="plugins.generic.customBlockManager.blockName" id="blockName" value=$blockName readonly=$readonly maxlength="40" inline=true size=$fbvStyles.size.MEDIUM}
+			{fbvElement type="text" label="plugins.generic.customBlockManager.blockName" id="blockName" value=$blockName maxlength="40" inline=true size=$fbvStyles.size.MEDIUM}
 		{/fbvFormSection}
 		{fbvFormSection label="plugins.generic.customBlock.content" for="blockContent"}
 			{fbvElement type="textarea" multilingual=true name="blockContent" id="blockContent" value=$blockContent rich=true height=$fbvStyles.height.TALL}
