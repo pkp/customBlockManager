@@ -119,53 +119,46 @@ class CustomBlockManagerPlugin extends GenericPlugin {
 	}
 
 	/**
-	 * @copydoc GenericPlugin::getManagementVerbs()
+	 * @copydoc Plugin::getActions()
 	 */
-	function getManagementVerbs() {
-		$verbs = parent::getManagementVerbs();
-		if ($this->getEnabled()) {
-			$verbs[] = array('manageCustomBlocks', __('plugins.generic.customBlockManager.manage'));
-		}
-		return $verbs;
-	}
-
-	/**
-	 * @copydoc Plugin::getManagementVerbLinkAction()
-	 */
-	function getManagementVerbLinkAction($request, $verb) {
+	function getActions($request, $actionArgs) {
+		import('lib.pkp.classes.linkAction.request.AjaxModal');
 		$router = $request->getRouter();
-
-		list($verbName, $verbLocalized) = $verb;
-
-		if ($verbName === 'manageCustomBlocks') {
-			// Generate a link action for the "manage" action
-			import('lib.pkp.classes.linkAction.request.AjaxLegacyPluginModal');
-			$actionRequest = new AjaxLegacyPluginModal(
-					$router->url($request, null, null, 'plugin', null, array('verb' => 'manageCustomBlocks', 'plugin' => $this->getName(), 'category' => 'generic')),
-					$this->getDisplayName()
-			);
-			return new LinkAction($verbName, $actionRequest, $verbLocalized, null);
-		}
-
-		return null;
+		return array_merge(
+			array(
+				new LinkAction(
+					'settings',
+					new AjaxModal(
+						$router->url(
+							$request, null, null, 'manage', null, array(
+								'plugin' => $this->getName(),
+								'category' => $this->getCategory(),
+								'action' => 'index'
+							)
+						),
+						$this->getDisplayName()
+					),
+					__('plugins.generic.customBlockManager.manage'),
+					null
+				),
+			),
+			parent::getActions($request, $actionArgs)
+		);
 	}
 
 	/**
-	 * @copydoc GenericPlugin::manage()
+	 * @copydoc Plugin::manage()
 	 */
-	function manage($verb, $args, &$message, &$messageParams, &$pluginModalContent = null) {
-		switch ($verb) {
-			case 'manageCustomBlocks':
-				$request =& $this->getRequest();
-				$templateMgr = TemplateManager::getManager($request);
-				$templateMgr->register_function('plugin_url', array($this, 'smartyPluginUrl'));
-				import('lib.pkp.classes.form.Form');
-				$form = new Form($this->getTemplatePath() . 'customBlockManager.tpl');
-				$pluginModalContent = $form->fetch($request);
-				return true;
-			default:
-				return parent::manage($verb, $args, $message, $messageParams);
-		}
+	function manage($args, $request) {
+		$templateMgr = TemplateManager::getManager($request);
+		$dispatcher = $request->getDispatcher();
+		return $templateMgr->fetchAjax(
+			'customBlockGridUrlGridContainer',
+			$dispatcher->url(
+				$request, ROUTE_COMPONENT, null,
+				'plugins.generic.customBlockManager.controllers.grid.CustomBlockGridHandler', 'fetchGrid'
+			)
+		);
 	}
 }
 
