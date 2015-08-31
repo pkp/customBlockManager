@@ -38,7 +38,7 @@ class CustomBlockPlugin extends BlockPlugin {
 	 * Get the management plugin
 	 * @return CustomBlockManagerPlugin
 	 */
-	function &getManagerPlugin() {
+	function getManagerPlugin() {
 		return PluginRegistry::getPlugin('generic', $this->parentPluginName);
 	}
 
@@ -53,7 +53,7 @@ class CustomBlockPlugin extends BlockPlugin {
 	 * @copydoc Plugin::getPluginPath()
 	 */
 	function getPluginPath() {
-		$plugin =& $this->getManagerPlugin();
+		$plugin = $this->getManagerPlugin();
 		return $plugin->getPluginPath();
 	}
 
@@ -61,7 +61,7 @@ class CustomBlockPlugin extends BlockPlugin {
 	 * @copydoc Plugin::getTemplatePath()
 	 */
 	function getTemplatePath() {
-		$plugin =& $this->getManagerPlugin();
+		$plugin = $this->getManagerPlugin();
 		return $plugin->getTemplatePath();
 	}
 

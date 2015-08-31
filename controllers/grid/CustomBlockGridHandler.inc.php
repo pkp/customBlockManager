@@ -92,15 +92,6 @@ class CustomBlockGridHandler extends GridHandler {
 	// Overridden methods from GridHandler
 	//
 	/**
-	 * @see Gridhandler::getPublishChangeEvents()
-	 * @return array List of events that should be published upon change
-	 * Used to update the site context switcher upon create/delete.
-	 */
-	function getPublishChangeEvents() {
-		return array('updateSidebar');
-	}
-
-	/**
 	 * @copydoc Gridhandler::getRowInstance()
 	 */
 	function getRowInstance() {
