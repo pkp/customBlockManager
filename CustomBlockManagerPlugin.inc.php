@@ -125,7 +125,7 @@ class CustomBlockManagerPlugin extends GenericPlugin {
 		import('lib.pkp.classes.linkAction.request.AjaxModal');
 		$router = $request->getRouter();
 		return array_merge(
-			array(
+			$this->getEnabled()?array(
 				new LinkAction(
 					'settings',
 					new AjaxModal(
@@ -140,8 +140,8 @@ class CustomBlockManagerPlugin extends GenericPlugin {
 					),
 					__('plugins.generic.customBlockManager.manage'),
 					null
-				),
-			),
+				)
+			):array(),
 			parent::getActions($request, $actionArgs)
 		);
 	}
