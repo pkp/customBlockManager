@@ -12,7 +12,7 @@
   *
   -->
  
-<locale name="el_GR" full_name="Greek">
+<locale name="el_GR" full_name="ελληνικά">
 	<message key="plugins.generic.customBlockManager.displayName">Διαχείριση Custom Block</message>
 	<message key="plugins.generic.customBlockManager.blockName">Όνομα Block</message>	
 	<message key="plugins.generic.customBlockManager.addBlock">Προσθήκη Block</message>	
