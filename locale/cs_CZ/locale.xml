@@ -12,7 +12,7 @@
   *
   -->
  
-<locale name="cs_CZ" full_name="Czech">
+<locale name="cs_CZ" full_name="Čeština">
 	<message key="plugins.generic.customBlockManager.displayName">Manažer uživatelských panelů</message>
 	<message key="plugins.generic.customBlockManager.blockName">Název panelu</message>	
 	<message key="plugins.generic.customBlockManager.addBlock">Přidat panel</message>	
