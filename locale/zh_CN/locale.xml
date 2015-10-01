@@ -8,11 +8,11 @@
   * Copyright (c) 2003-2015 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
-  * Localization strings for the zh_CN (China) locale.
+  * Localization strings for the zh_CN (简体中文) locale.
   *
   -->
  
-<locale name="zh_CN" full_name="China">
+<locale name="zh_CN" full_name="简体中文">
 	<message key="plugins.generic.customBlockManager.displayName">自定义区块管理(Custom Block Manager)</message>
 	<message key="plugins.generic.customBlockManager.description">本插件允许在边栏增加区块，和对边栏区块的重新排序。(This plugin lets you create addition sidebar blocks.  Once they are created, you can edit their content and rearrange them within the sidebars.)</message>	
 	<message key="plugins.generic.customBlockManager.blockName">区块名称(Block Name)</message>	
