@@ -8,6 +8,8 @@
  * Sidebar custom block.
  *
  *}
-<div class="block custom" id="{$customBlockId}">
-	{$customBlockContent}
+<div class="pkp_block block_custom" id="{$customBlockId|escape}">
+	<div class="content">
+		{$customBlockContent}
+	</div>
 </div>
