@@ -88,9 +88,9 @@ class CustomBlockManagerPlugin extends GenericPlugin {
 					if ($blockPlugin->getEnabled() !== false) {
 						$blockPlugin->setEnabled(true);
 					}
-					// Default the block to the right sidebar (for newly created blocks)
+					// Default the block to the left sidebar (for newly created blocks)
 					if (!is_numeric($blockPlugin->getBlockContext())) {
-						$blockPlugin->setBlockContext(BLOCK_CONTEXT_RIGHT_SIDEBAR);
+						$blockPlugin->setBlockContext(BLOCK_CONTEXT_LEFT_SIDEBAR);
 					}
 
 					// Add the plugin to the list of registered plugins

@@ -80,8 +80,8 @@ class CustomBlockForm extends Form {
 			// Default the block to being enabled
 			$plugin->setEnabled(true);
 
-			// Default the block to the right sidebar
-			$plugin->setBlockContext(BLOCK_CONTEXT_RIGHT_SIDEBAR);
+			// Default the block to the left sidebar
+			$plugin->setBlockContext(BLOCK_CONTEXT_LEFT_SIDEBAR);
 
 			// Add the custom block to the list of the custom block plugins in the
 			// custom block manager plugin
