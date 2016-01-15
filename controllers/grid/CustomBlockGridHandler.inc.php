@@ -46,8 +46,6 @@ class CustomBlockGridHandler extends GridHandler {
 		// Set the grid title.
 		$this->setTitle('plugins.generic.customBlockManager.customBlocks');
 		// Set the grid instructions.
-		$this->setInstructions('plugins.generic.customBlockManager.introduction');
-		// Set the no items row text.
 		$this->setEmptyRowText('plugins.generic.customBlockManager.noneCreated');
 
 		// Get the blocks and add the data to the grid
