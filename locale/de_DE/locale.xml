@@ -16,7 +16,6 @@
 	<message key="plugins.generic.customBlockManager.manage">Benutzerdefinierte Blöcke verwalten</message>
 	<message key="plugins.generic.customBlockManager.description">Dieses Plug-In erlaubt Ihnen, benutzerdefinierte Blöcke in der Sidebar zu verwalten (anzulegen, zu bearbeiten und zu löschen).</message>
 	<message key="plugins.generic.customBlockManager.customBlocks">Benutzerdefinierte Blöcke</message>	
-	<message key="plugins.generic.customBlockManager.introduction">Sie können dieses Plug-In benutzen, um benutzerdefinierte Blöcke in der Sidebar zu verwalten (anzulegen, zu bearbeiten und zu löschen). Um Ihren benutzerdefinierten Block am gewünschten Ort in der Sidebar anzuzeigen, gehen Sie bitte zu  Management > Website-Einstellungen > Aussehen > Layout > Verwaltung der Sidebar.</message>
 	<message key="plugins.generic.customBlockManager.blockName">Name des Blocks</message>
 	<message key="plugins.generic.customBlockManager.addBlock">Block hinzufügen</message>	
 	<message key="plugins.generic.customBlockManager.noneCreated">Es wurden bisher keine benutzerdefinierten Blöcke angelegt..</message>	
