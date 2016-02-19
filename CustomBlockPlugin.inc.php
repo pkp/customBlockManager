@@ -60,9 +60,9 @@ class CustomBlockPlugin extends BlockPlugin {
 	/**
 	 * @copydoc Plugin::getTemplatePath()
 	 */
-	function getTemplatePath() {
+	function getTemplatePath($inCore = false) {
 		$plugin = $this->getManagerPlugin();
-		return $plugin->getTemplatePath();
+		return $plugin->getTemplatePath($inCore);
 	}
 
 	/**
