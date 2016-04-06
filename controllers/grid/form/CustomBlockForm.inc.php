@@ -38,7 +38,7 @@ class CustomBlockForm extends Form {
 		// Add form checks
 		$this->addCheck(new FormValidatorPost($this));
 		$this->addCheck(new FormValidator($this, 'blockName', 'required', 'plugins.generic.customBlock.nameRequired'));
-		$this->addCheck(new FormValidatorRegExp($this, 'blockName', 'required', 'plugins.generic.customBlock.nameRegEx', '/^[a-zA-Z_-]+$/'));
+		$this->addCheck(new FormValidatorRegExp($this, 'blockName', 'required', 'plugins.generic.customBlock.nameRegEx', '/^[a-zA-Z0-9_-]+$/'));
 	}
 
 	/**
