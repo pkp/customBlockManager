@@ -57,6 +57,7 @@ class CustomBlockGridRow extends GridRow {
 				new LinkAction(
 					'deleteCustomBlock',
 					new RemoteActionConfirmationModal(
+						$request->getSession(),
 						__('common.confirmDelete'),
 						__('grid.action.delete'),
 						$router->url($request, null, null, 'deleteCustomBlock', null, array('blockName' => $blockName)), 'modal_delete'

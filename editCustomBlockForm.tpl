@@ -16,6 +16,7 @@
 </script>
 
 <form class="pkp_form" id="customBlockForm" method="post" action="{url router=$smarty.const.ROUTE_COMPONENT component="plugins.generic.customBlockManager.controllers.grid.CustomBlockGridHandler" op="updateCustomBlock" existingBlockName=$blockName}">
+	{csrf}
 	{fbvFormArea id="customBlocksFormArea" class="border"}
 		{fbvFormSection}
 			{fbvElement type="text" label="plugins.generic.customBlockManager.blockName" id="blockName" value=$blockName maxlength="40" inline=true size=$fbvStyles.size.MEDIUM}
