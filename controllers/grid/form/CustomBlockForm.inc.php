@@ -29,8 +29,8 @@ class CustomBlockForm extends Form {
 	 * @param $contextId int
 	 * @param $plugin CustomBlockPlugin
 	 */
-	function CustomBlockForm($template, $contextId, $plugin = null) {
-		parent::Form($template);
+	function __construct($template, $contextId, $plugin = null) {
+		parent::__construct($template);
 
 		$this->contextId = $contextId;
 		$this->plugin = $plugin;
