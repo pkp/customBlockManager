@@ -12,7 +12,7 @@
   -->
  
 <locale name="ru_RU" full_name="Русский">
-	<message key="plugins.generic.customBlockManager.displayName">Менеджер пользовательских блоков</message>
+	<message key="plugins.generic.customBlockManager.displayName">Модуль «Менеджер пользовательских блоков»</message>
 	<message key="plugins.generic.customBlockManager.manage">Управлять пользовательскими блоками</message>
 	<message key="plugins.generic.customBlockManager.description">Позволяет управлять пользовательскими блоками (добавлять, редактировать и удалять) на боковой панели.</message>
 	<message key="plugins.generic.customBlockManager.customBlocks">Пользовательские блоки</message>	
