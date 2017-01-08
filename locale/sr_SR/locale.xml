@@ -13,11 +13,17 @@
   -->
  
 <locale name="sr_SR" full_name="Cрпски">
-	<message key="plugins.generic.customBlockManager.displayName">Menadžer prilagođenih blokova</message>
-	<message key="plugins.generic.customBlockManager.blockName">Ime bloka</message>	
-	<message key="plugins.generic.customBlockManager.addBlock">Dodaj blok</message>	
+	<message key="plugins.generic.customBlockManager.displayName">Менаџер прилагођених блокова</message>
+	<message key="plugins.generic.customBlockManager.blockName">Име блока</message>	
+	<message key="plugins.generic.customBlockManager.addBlock">Додај блок</message>	
 
-	<message key="plugins.generic.customBlock.content">Sadržaj</message>
-	<message key="plugins.generic.customBlock.nameSuffix">(Dodatak prilagođenih blokova)</message>
-	<message key="plugins.generic.customBlock.description">Ovo je blok koji je napravio korisnik.</message>
+	<message key="plugins.generic.customBlock.content">Садржај</message>
+	<message key="plugins.generic.customBlock.nameSuffix">(Додатак прилагођених блокова)</message>
+	<message key="plugins.generic.customBlock.description">Ово је блок који је направио корисник.</message>
+	<message key="plugins.generic.customBlockManager.manage">Уреди прилагођене блокове</message>
+	<message key="plugins.generic.customBlockManager.description">Овај додатак вам омогућује да уређујете (додајете, мењате и бришете) прилагођене блокове.</message>
+	<message key="plugins.generic.customBlockManager.customBlocks">Прилагођени блокови</message>
+	<message key="plugins.generic.customBlockManager.noneCreated">Нема прилагођених блокова.</message>
+	<message key="plugins.generic.customBlock.nameRequired">Име блока је оавезно.</message>
+	<message key="plugins.generic.customBlock.nameRegEx">Име блока можр садржати само слова, бројеве, црте и подвлаке.</message>
 </locale>
