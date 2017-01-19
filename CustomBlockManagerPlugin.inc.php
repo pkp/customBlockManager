@@ -94,10 +94,8 @@ class CustomBlockManagerPlugin extends GenericPlugin {
 					}
 
 					// Add the plugin to the list of registered plugins
-					$plugins[$blockPlugin->getSeq()][$blockPlugin->getPluginPath() . $i] =& $blockPlugin;
-
+					$plugins[$blockPlugin->getSeq()][$blockPlugin->getPluginPath() . $i] = $blockPlugin;
 					$i++;
-					unset($blockPlugin);
 				}
 				break;
 		}
