@@ -40,7 +40,7 @@ class CustomBlockGridHandler extends GridHandler {
 	 * @copydoc Gridhandler::initialize()
 	 */
 	function initialize($request, $args = null) {
-		parent::initialize($request);
+		parent::initialize($request, $args);
 		$context = $request->getContext();
 
 		// Set the grid title.
