@@ -37,7 +37,7 @@ class CustomBlockGridHandler extends GridHandler {
 	// Overridden template methods
 	//
 	/**
-	 * @copydoc Gridhandler::initialize()
+	 * @copydoc GridHandler::initialize()
 	 */
 	function initialize($request, $args = null) {
 		parent::initialize($request, $args);
@@ -90,7 +90,7 @@ class CustomBlockGridHandler extends GridHandler {
 	// Overridden methods from GridHandler
 	//
 	/**
-	 * @copydoc Gridhandler::getRowInstance()
+	 * @copydoc GridHandler::getRowInstance()
 	 */
 	function getRowInstance() {
 		return new CustomBlockGridRow();
