@@ -84,16 +84,6 @@ class CustomBlockManagerPlugin extends GenericPlugin {
 				foreach ($blocks as $block) {
 					$blockPlugin = new CustomBlockPlugin($block, $this->getName());
 
-					// Default the block to being enabled (for newly created blocks)
-					if ($blockPlugin->getEnabled() !== false) {
-						$blockPlugin->setEnabled(true);
-					}
-
-					// Default the block to the sidebar (for newly created blocks)
-					if (!is_numeric($blockPlugin->getBlockContext())) {
-						$blockPlugin->setBlockContext(BLOCK_CONTEXT_SIDEBAR);
-					}
-
 					// Add the plugin to the list of registered plugins
 					$plugins[$blockPlugin->getSeq()][$blockPlugin->getPluginPath() . $i] = $blockPlugin;
 					$i++;
