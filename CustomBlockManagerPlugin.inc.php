@@ -73,10 +73,10 @@ class CustomBlockManagerPlugin extends GenericPlugin {
 
 				// Ensure that there is a context (journal or press)
 				$context = $request->getContext();
-				if (!$context) return false;
+				$contextId = $context ? $context->getId() : 0;
 
 				// Load the custom blocks we have created
-				$blocks = $this->getSetting($context->getId(), 'blocks');
+				$blocks = $this->getSetting($contextId, 'blocks');
 				if (!is_array($blocks)) break;
 
 				// Loop through each custom block and register it
@@ -88,7 +88,8 @@ class CustomBlockManagerPlugin extends GenericPlugin {
 					if ($blockPlugin->getEnabled() !== false) {
 						$blockPlugin->setEnabled(true);
 					}
-					// Default the block to the left sidebar (for newly created blocks)
+
+					// Default the block to the sidebar (for newly created blocks)
 					if (!is_numeric($blockPlugin->getBlockContext())) {
 						$blockPlugin->setBlockContext(BLOCK_CONTEXT_SIDEBAR);
 					}
@@ -157,6 +158,19 @@ class CustomBlockManagerPlugin extends GenericPlugin {
 				'plugins.generic.customBlockManager.controllers.grid.CustomBlockGridHandler', 'fetchGrid'
 			)
 		);
+	}
+
+	/**
+	 * This plugin can be used site-wide or in a specific context. The
+	 * isSitePlugin check is used to grant access to different users, so this
+	 * plugin must return true only if the user is currently in the site-wide
+	 * context.
+	 *
+	 * @see PluginGridRow::_canEdit()
+	 * @return boolean
+	 */
+	function isSitePlugin() {
+		return !Application::getRequest()->getContext();
 	}
 }
 

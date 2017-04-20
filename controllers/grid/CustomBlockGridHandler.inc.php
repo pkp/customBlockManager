@@ -42,6 +42,7 @@ class CustomBlockGridHandler extends GridHandler {
 	function initialize($request, $args = null) {
 		parent::initialize($request, $args);
 		$context = $request->getContext();
+		$contextId = $context ? $context->getId() : 0;
 
 		// Set the grid title.
 		$this->setTitle('plugins.generic.customBlockManager.customBlocks');
@@ -50,7 +51,7 @@ class CustomBlockGridHandler extends GridHandler {
 
 		// Get the blocks and add the data to the grid
 		$customBlockManagerPlugin = $this->plugin;
-		$blocks = $customBlockManagerPlugin->getSetting($context->getId(), 'blocks');
+		$blocks = $customBlockManagerPlugin->getSetting($contextId, 'blocks');
 		$gridData = array();
 		if (is_array($blocks)) foreach ($blocks as $block) {
 			$gridData[$block] = array(
@@ -119,6 +120,7 @@ class CustomBlockGridHandler extends GridHandler {
 	function editCustomBlock($args, $request) {
 		$blockName = $request->getUserVar('blockName');
 		$context = $request->getContext();
+		$contextId = $context ? $context->getId() : 0;
 		$this->setupTemplate($request);
 
 		$customBlockPlugin = null;
@@ -133,7 +135,7 @@ class CustomBlockGridHandler extends GridHandler {
 		import('plugins.generic.customBlockManager.controllers.grid.form.CustomBlockForm');
 		$customBlockManagerPlugin = $this->plugin;
 		$template = $customBlockManagerPlugin->getTemplatePath() . 'editCustomBlockForm.tpl';
-		$customBlockForm = new CustomBlockForm($template, $context->getId(), $customBlockPlugin);
+		$customBlockForm = new CustomBlockForm($template, $contextId, $customBlockPlugin);
 		$customBlockForm->initData();
 		$json = new JSONMessage(true, $customBlockForm->fetch($request));
 		return $json->getString();
@@ -148,6 +150,7 @@ class CustomBlockGridHandler extends GridHandler {
 	function updateCustomBlock($args, $request) {
 		$pluginName = $request->getUserVar('existingBlockName');
 		$context = $request->getContext();
+		$contextId = $context ? $context->getId() : 0;
 		$this->setupTemplate($request);
 
 		$customBlockPlugin = null;
@@ -162,7 +165,7 @@ class CustomBlockGridHandler extends GridHandler {
 		import('plugins.generic.customBlockManager.controllers.grid.form.CustomBlockForm');
 		$customBlockManagerPlugin = $this->plugin;
 		$template = $customBlockManagerPlugin->getTemplatePath() . 'editCustomBlockForm.tpl';
-		$customBlockForm = new CustomBlockForm($template, $context->getId(), $customBlockPlugin);
+		$customBlockForm = new CustomBlockForm($template, $contextId, $customBlockPlugin);
 		$customBlockForm->readInputData();
 
 		// Check the results
@@ -186,20 +189,21 @@ class CustomBlockGridHandler extends GridHandler {
 	function deleteCustomBlock($args, $request) {
 		$blockName = $request->getUserVar('blockName');
 		$context = $request->getContext();
+		$contextId = $context ? $context->getId() : 0;
 
 		// Delete all the entries for this block plugin
 		$pluginSettingsDao = DAORegistry::getDAO('PluginSettingsDAO');
-		$pluginSettingsDao->deleteSetting($context->getId(), $blockName, 'enabled');
-		$pluginSettingsDao->deleteSetting($context->getId(), $blockName, 'context');
-		$pluginSettingsDao->deleteSetting($context->getId(), $blockName, 'seq');
-		$pluginSettingsDao->deleteSetting($context->getId(), $blockName, 'blockContent');
+		$pluginSettingsDao->deleteSetting($contextId, $blockName, 'enabled');
+		$pluginSettingsDao->deleteSetting($contextId, $blockName, 'context');
+		$pluginSettingsDao->deleteSetting($contextId, $blockName, 'seq');
+		$pluginSettingsDao->deleteSetting($contextId, $blockName, 'blockContent');
 
 		// Remove this block plugin from the list of the custom block plugins
 		$customBlockManagerPlugin = $this->plugin;
-		$blocks = $customBlockManagerPlugin->getSetting($context->getId(), 'blocks');
+		$blocks = $customBlockManagerPlugin->getSetting($contextId, 'blocks');
 		$newBlocks = array_diff($blocks, array($blockName));
 		ksort($newBlocks);
-		$customBlockManagerPlugin->updateSetting($context->getId(), 'blocks', $newBlocks);
+		$customBlockManagerPlugin->updateSetting($contextId, 'blocks', $newBlocks);
 		return DAO::getDataChangedEvent();
 	}
 }
