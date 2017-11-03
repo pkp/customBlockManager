@@ -160,7 +160,7 @@ class CustomBlockManagerPlugin extends GenericPlugin {
 	 * @return boolean
 	 */
 	function isSitePlugin() {
-		return !Application::getRequest()->getContext();
+		return true;
 	}
 }
 

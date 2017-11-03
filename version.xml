@@ -16,5 +16,6 @@
 	<release>1.2.0.0</release>
 	<date>2014-09-19</date>
 	<lazy-load>1</lazy-load>
+	<sitewide>1</sitewide>
 	<class>CustomBlockManagerPlugin</class>
 </version>
