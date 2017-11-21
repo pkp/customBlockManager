@@ -98,9 +98,8 @@ class CustomBlockPlugin extends BlockPlugin {
 	 * @copydoc BlockPlugin::getContents()
 	 */
 	function getContents(&$templateMgr, $request = null) {
-		// Ensure that we're dealing with a request with context
 		$context = $request->getContext();
-		if (!$context) return '';
+		$contextId = $context ? $context->getId() : 0;
 
 		// Get the block contents.
 		$customBlockContent = $this->getSetting($context->getId(), 'blockContent');
