@@ -102,7 +102,7 @@ class CustomBlockPlugin extends BlockPlugin {
 		$contextId = $context ? $context->getId() : 0;
 
 		// Get the block contents.
-		$customBlockContent = $this->getSetting($context->getId(), 'blockContent');
+		$customBlockContent = $this->getSetting($contextId, 'blockContent');
 		$currentLocale = AppLocale::getLocale();
 		$contextPrimaryLocale = $context->getPrimaryLocale();
 
