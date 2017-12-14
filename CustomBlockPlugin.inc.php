@@ -97,14 +97,14 @@ class CustomBlockPlugin extends BlockPlugin {
 	/**
 	 * @copydoc BlockPlugin::getContents()
 	 */
-	function getContents(&$templateMgr, $request = null) {
+	function getContents($templateMgr, $request = null) {
 		$context = $request->getContext();
 		$contextId = $context ? $context->getId() : 0;
 
 		// Get the block contents.
 		$customBlockContent = $this->getSetting($contextId, 'blockContent');
 		$currentLocale = AppLocale::getLocale();
-		$contextPrimaryLocale = $context->getPrimaryLocale();
+		$contextPrimaryLocale = $context?$context->getPrimaryLocale():$request->getSite()->getPrimaryLocale();
 
 		$divCustomBlockId = 'customblock-'.preg_replace('/\W+/', '-', $this->getName());
 		$templateMgr->assign('customBlockId', $divCustomBlockId);
