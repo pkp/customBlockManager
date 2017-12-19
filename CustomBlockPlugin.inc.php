@@ -127,9 +127,9 @@ class CustomBlockPlugin extends BlockPlugin {
 	/**
 	 * @copydoc BlockPlugin::getSeq()
 	 */
-	function getSeq() {
+	function getSeq($contextId = null) {
 		if (!Config::getVar('general', 'installed')) return 1;
-		return parent::getSeq();
+		return parent::getSeq($contextId);
 	}
 }
 
