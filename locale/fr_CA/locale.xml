@@ -20,4 +20,10 @@
 	<message key="plugins.generic.customBlock.content">Contenu</message>
 	<message key="plugins.generic.customBlock.nameSuffix">(Plugiciel de bloc personnalisé)</message>
 	<message key="plugins.generic.customBlock.description">Il s'agit d'un bloc créé par l'utilisateur.</message>
+	<message key="plugins.generic.customBlockManager.manage">Gérer les blocs personnalisés</message>
+	<message key="plugins.generic.customBlockManager.description">Ce plugiciel vous permet de gérer (ajouter, modifier, supprimer) les blocs personnalisés de la barre latérale.</message>
+	<message key="plugins.generic.customBlockManager.customBlocks">Blocs personnalisés</message>
+	<message key="plugins.generic.customBlockManager.noneCreated">Aucun bloc personnalisé n'a été créé.</message>
+	<message key="plugins.generic.customBlock.nameRequired">Le nom du bloc personnalisé est requis.</message>
+	<message key="plugins.generic.customBlock.nameRegEx">Le nom du bloc personnalisé ne doit contenir que des lettres, des chiffres, des tirets et/ou des traits de soulignement.</message>
 </locale>
