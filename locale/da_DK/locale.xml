@@ -12,17 +12,17 @@
   -->
  
 <locale name="da_DK" full_name="Dansk">
-	<message key="plugins.generic.customBlockManager.displayName">Custom Block Manager</message>
-	<message key="plugins.generic.customBlockManager.manage">Administrér 'Custom Blocks'</message>
-	<message key="plugins.generic.customBlockManager.description">Denne plug-in gør dig i stand til håndtere (tilføje, redigere og slette) 'Custom Blocks' (brugerdefinederede blokke) i sidemenuen.</message>
-	<message key="plugins.generic.customBlockManager.customBlocks">Custom Blocks</message>
+	<message key="plugins.generic.customBlockManager.displayName">Brugerdefineret blok-administrator</message>
+	<message key="plugins.generic.customBlockManager.manage">Administrér brugerdefinerede blokke</message>
+	<message key="plugins.generic.customBlockManager.description">Denne plug-in gør dig i stand til håndtere (tilføje, redigere og slette) brugerdefinerede blokke i sidemenuen.</message>
+	<message key="plugins.generic.customBlockManager.customBlocks">Brugerdefinerede blokke</message>
 	<message key="plugins.generic.customBlockManager.blockName">Elementnavn</message>
 	<message key="plugins.generic.customBlockManager.addBlock">Tilføj element</message>	
-	<message key="plugins.generic.customBlockManager.noneCreated">Der er ikke oprettet nogen 'Custom Blocks'</message>
+	<message key="plugins.generic.customBlockManager.noneCreated">Der er ikke oprettet nogen brugerdefinerede blokke</message>
 	
 	<message key="plugins.generic.customBlock.content">Indhold</message>
-	<message key="plugins.generic.customBlock.nameSuffix">(Custom Block Plugin)</message>
+	<message key="plugins.generic.customBlock.nameSuffix">(Brugerdefineret blok)</message>
 	<message key="plugins.generic.customBlock.description">Dette er et brugerdefineret element.</message>
-	<message key="plugins.generic.customBlock.nameRequired">Et 'Custom Block' navn er påkrævet.</message>
-	<message key="plugins.generic.customBlock.nameRegEx">'Custom Block' navnet må indeholde bogstaver, numre og bindestreg/understregning.</message>
+	<message key="plugins.generic.customBlock.nameRequired">Et brugerdefineret blok-navn er påkrævet.</message>
+	<message key="plugins.generic.customBlock.nameRegEx">Det brugerdefinerede blok-navn må indeholde bogstaver, numre og bindestreg/understregning.</message>
 </locale>
