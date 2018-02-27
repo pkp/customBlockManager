@@ -34,14 +34,14 @@ class CustomBlockManagerPlugin extends GenericPlugin {
 	/**
 	 * @copydoc Plugin::register()
 	 */
-	function register($category, $path) {
-		if (parent::register($category, $path)) {
+	function register($category, $path, $mainContextId = null) {
+		if (parent::register($category, $path, $mainContextId)) {
 			// If the system isn't installed, or is performing an upgrade, don't
 			// register hooks. This will prevent DB access attempts before the
 			// schema is installed.
 			if (!Config::getVar('general', 'installed') || defined('RUNNING_UPGRADE')) return true;
 
-			if ($this->getEnabled()) {
+			if ($this->getEnabled($mainContextId)) {
 				// This hook is used to step in when block plugins are registered to add
 				// each custom block that has been created with this plugin.
 				HookRegistry::register('PluginRegistry::loadCategory', array($this, 'callbackLoadCategory'));
