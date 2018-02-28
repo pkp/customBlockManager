@@ -42,9 +42,28 @@ class CustomBlockManagerPlugin extends GenericPlugin {
 			if (!Config::getVar('general', 'installed') || defined('RUNNING_UPGRADE')) return true;
 
 			if ($this->getEnabled($mainContextId)) {
-				// This hook is used to step in when block plugins are registered to add
-				// each custom block that has been created with this plugin.
-				HookRegistry::register('PluginRegistry::loadCategory', array($this, 'callbackLoadCategory'));
+				$this->import('CustomBlockPlugin');
+
+				// Ensure that there is a context (journal or press)
+				if ($request = Application::getRequest()) {
+					if ($mainContextId) {
+						$contextId = $mainContextId;
+					} else {
+						$context = $request->getContext();
+						$contextId = $context ? $context->getId() : CONTEXT_SITE;
+					}
+
+					// Load the custom blocks we have created
+					$blocks = $this->getSetting($contextId, 'blocks');
+					if (!is_array($blocks)) $blocks = array();
+
+					// Loop through each custom block and register it
+					$i=0;
+					foreach ($blocks as $block) {
+						$blockPlugin = new CustomBlockPlugin($block, $this);
+						PluginRegistry::register('blocks', $blockPlugin, $this->getPluginPath());
+					}
+				}
 
 				// This hook is used to register the components this plugin implements to
 				// permit administration of custom block plugins.

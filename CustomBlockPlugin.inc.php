@@ -18,19 +18,19 @@ import('lib.pkp.classes.plugins.BlockPlugin');
 
 class CustomBlockPlugin extends BlockPlugin {
 	/** @var string Name of this block plugin */
-	var $blockName;
+	var $_blockName;
 
-	/** @var string Name of parent plugin */
-	var $parentPluginName;
+	/** @var CustomBlockManagerPlugin Parent plugin */
+	var $_parentPlugin;
 
 	/**
 	 * Constructor
 	 * @param $blockName string Name of this block plugin.
-	 * @param $parentPluginName string Name of block plugin management plugin.
+	 * @param $parentPlugin CustomBlockManagerPlugin Custom block plugin management plugin.
 	 */
-	function __construct($blockName, $parentPluginName) {
-		$this->blockName = $blockName;
-		$this->parentPluginName = $parentPluginName;
+	function __construct($blockName, $parentPlugin) {
+		$this->_blockName = $blockName;
+		$this->_parentPlugin = $parentPlugin;
 		parent::__construct();
 	}
 
@@ -39,14 +39,14 @@ class CustomBlockPlugin extends BlockPlugin {
 	 * @return CustomBlockManagerPlugin
 	 */
 	function getManagerPlugin() {
-		return PluginRegistry::getPlugin('generic', $this->parentPluginName);
+		return $this->_parentPlugin;
 	}
 
 	/**
 	 * @copydoc Plugin::getName()
 	 */
 	function getName() {
-		return $this->blockName;
+		return $this->_blockName;
 	}
 
 	/**
@@ -84,7 +84,7 @@ class CustomBlockPlugin extends BlockPlugin {
 	 * @copydoc Plugin::getDisplayName()
 	 */
 	function getDisplayName() {
-		return $this->blockName . ' ' . __('plugins.generic.customBlock.nameSuffix');
+		return $this->_blockName . ' ' . __('plugins.generic.customBlock.nameSuffix');
 	}
 
 	/**
