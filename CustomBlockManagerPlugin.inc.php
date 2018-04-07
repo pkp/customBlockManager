@@ -101,7 +101,7 @@ class CustomBlockManagerPlugin extends GenericPlugin {
 				// Loop through each custom block and register it
 				$i=0;
 				foreach ($blocks as $block) {
-					$blockPlugin = new CustomBlockPlugin($block, $this->getName());
+					$blockPlugin = new CustomBlockPlugin($block, $this);
 
 					// Add the plugin to the list of registered plugins
 					$plugins[$blockPlugin->getSeq()][$blockPlugin->getPluginPath() . $i] = $blockPlugin;
