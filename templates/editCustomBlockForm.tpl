@@ -1,5 +1,5 @@
 {**
- * plugins/generic/customBlockManager/editCustomBlockForm.tpl
+ * plugins/generic/customBlockManager/templates/editCustomBlockForm.tpl
  *
  * Copyright (c) 2014-2018 Simon Fraser University
  * Copyright (c) 2003-2018 John Willinsky
