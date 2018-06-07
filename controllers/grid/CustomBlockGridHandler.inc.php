@@ -134,7 +134,7 @@ class CustomBlockGridHandler extends GridHandler {
 		// Create and present the edit form
 		import('plugins.generic.customBlockManager.controllers.grid.form.CustomBlockForm');
 		$customBlockManagerPlugin = $this->plugin;
-		$template = $customBlockManagerPlugin->getTemplatePath() . 'editCustomBlockForm.tpl';
+		$template = $customBlockManagerPlugin->getTemplateResource('editCustomBlockForm.tpl');
 		$customBlockForm = new CustomBlockForm($template, $contextId, $customBlockPlugin);
 		$customBlockForm->initData();
 		$json = new JSONMessage(true, $customBlockForm->fetch($request));
@@ -164,7 +164,7 @@ class CustomBlockGridHandler extends GridHandler {
 		// Create and populate the form
 		import('plugins.generic.customBlockManager.controllers.grid.form.CustomBlockForm');
 		$customBlockManagerPlugin = $this->plugin;
-		$template = $customBlockManagerPlugin->getTemplatePath() . 'editCustomBlockForm.tpl';
+		$template = $customBlockManagerPlugin->getTemplateResource('editCustomBlockForm.tpl');
 		$customBlockForm = new CustomBlockForm($template, $contextId, $customBlockPlugin);
 		$customBlockForm->readInputData();
 
