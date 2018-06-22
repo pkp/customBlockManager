@@ -14,7 +14,7 @@
 <locale name="de_DE" full_name="Deutsch (Deutschland)">
 	<message key="plugins.generic.customBlockManager.displayName">Verwaltung benutzerdefinierter Blöcke</message>
 	<message key="plugins.generic.customBlockManager.manage">Benutzerdefinierte Blöcke verwalten</message>
-	<message key="plugins.generic.customBlockManager.description">Dieses Plug-In erlaubt Ihnen, benutzerdefinierte Blöcke in der Sidebar zu verwalten (anzulegen, zu bearbeiten und zu löschen).</message>
+	<message key="plugins.generic.customBlockManager.description">Dieses Plugin erlaubt Ihnen, benutzerdefinierte Blöcke in der Sidebar zu verwalten (anzulegen, zu bearbeiten und zu löschen).</message>
 	<message key="plugins.generic.customBlockManager.customBlocks">Benutzerdefinierte Blöcke</message>	
 	<message key="plugins.generic.customBlockManager.blockName">Name des Blocks</message>
 	<message key="plugins.generic.customBlockManager.addBlock">Block hinzufügen</message>	
