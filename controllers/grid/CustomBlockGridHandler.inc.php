@@ -137,8 +137,7 @@ class CustomBlockGridHandler extends GridHandler {
 		$template = $customBlockManagerPlugin->getTemplateResource('editCustomBlockForm.tpl');
 		$customBlockForm = new CustomBlockForm($template, $contextId, $customBlockPlugin);
 		$customBlockForm->initData();
-		$json = new JSONMessage(true, $customBlockForm->fetch($request));
-		return $json->getString();
+		return new JSONMessage(true, $customBlockForm->fetch($request));
 	}
 
 	/**
@@ -175,8 +174,7 @@ class CustomBlockGridHandler extends GridHandler {
  			return DAO::getDataChangedEvent();
 		} else {
 			// Present any errors
-			$json = new JSONMessage(true, $customBlockForm->fetch($request));
-			return $json->getString();
+			return new JSONMessage(true, $customBlockForm->fetch($request));
 		}
 	}
 
