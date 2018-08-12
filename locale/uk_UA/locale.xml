@@ -7,20 +7,22 @@
   * Copyright (c) 2014-2018 Simon Fraser University
   * Copyright (c) 2003-2018 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
-  *
+  * Localization information: https://pkp.sfu.ca/wiki/index.php?title=OJS:_Ukrainian_(uk_UA)
   * Localization strings for the uk_UA (Українська) locale.
-  *
-  * Translated by Denys Solovianenko, 2011
-  * V. I. Vernadsky National Library of Ukraine
   -->
  
 <locale name="uk_UA" full_name="Українська">
-       <message key="plugins.generic.customBlockManager.displayName">Менеджер власних блоків</message>
-       <message key="plugins.generic.customBlockManager.description">Цей модуль дозволяє керувати власними блоками на панелі.  Ви можете редагувати зміст блоків, створених тут, засобами налаштувань.</message>
-       <message key="plugins.generic.customBlockManager.blockName">Назва блоку</message>       
-       <message key="plugins.generic.customBlockManager.addBlock">Додати блок</message>        
-
-       <message key="plugins.generic.customBlock.content">Зміст</message>
-       <message key="plugins.generic.customBlock.nameSuffix">(Модуль власного блоку)</message>
-       <message key="plugins.generic.customBlock.description">Це - блок, створений користувачем.</message>
+	<message key="plugins.generic.customBlockManager.displayName">Менеджер власних блоків</message>
+	<message key="plugins.generic.customBlockManager.manage">Керувати власними блоками</message>
+	<message key="plugins.generic.customBlockManager.description">Дозволяє керувати (додавати, змінювати та видаляти) власними блоками на бічній панелі.</message>
+	<message key="plugins.generic.customBlockManager.customBlocks">Власні блоки</message>	
+	<message key="plugins.generic.customBlockManager.blockName">Назва блоку</message>
+	<message key="plugins.generic.customBlockManager.addBlock">Додати блок</message>	
+	<message key="plugins.generic.customBlockManager.noneCreated">Власні блоки не були створені.</message>	
+	
+	<message key="plugins.generic.customBlock.content">Зміст</message>
+	<message key="plugins.generic.customBlock.nameSuffix">(власний блок)</message>
+	<message key="plugins.generic.customBlock.description">Це створений користувачем блок.</message>
+	<message key="plugins.generic.customBlock.nameRequired">Назва власного блоку обов'язкова.</message>
+	<message key="plugins.generic.customBlock.nameRegEx">Назва власного блоку повинна містити лише літери, цифри, дефіс та підкреслювання.</message>
 </locale>
