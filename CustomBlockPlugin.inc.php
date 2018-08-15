@@ -133,4 +133,3 @@ class CustomBlockPlugin extends BlockPlugin {
 	}
 }
 
-?>

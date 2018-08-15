@@ -206,4 +206,3 @@ class CustomBlockGridHandler extends GridHandler {
 	}
 }
 
-?>
