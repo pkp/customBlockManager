@@ -99,4 +99,3 @@ class CustomBlockForm extends Form {
 	}
 }
 
-?>

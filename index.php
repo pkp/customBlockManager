@@ -18,4 +18,3 @@
 require_once('CustomBlockManagerPlugin.inc.php');
 return new CustomBlockManagerPlugin();
 
-?> 

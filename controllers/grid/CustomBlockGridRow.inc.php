@@ -64,4 +64,3 @@ class CustomBlockGridRow extends GridRow {
 	}
 }
 
-?>
