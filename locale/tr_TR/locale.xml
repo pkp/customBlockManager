@@ -21,4 +21,9 @@
 	<message key="plugins.generic.customBlock.content">İçerik</message>
 	<message key="plugins.generic.customBlock.nameSuffix">(Özelleştirilmiş Blok Eklentisi)</message>
 	<message key="plugins.generic.customBlock.description">Bu üye tarafından oluşturulmuş bir bloktur.</message>
+	<message key="plugins.generic.customBlockManager.manage">Özel Blokları Yönet</message>
+	<message key="plugins.generic.customBlockManager.customBlocks">Özel Bloklar</message>
+	<message key="plugins.generic.customBlockManager.noneCreated">Özel blok oluşturulmadı.</message>
+	<message key="plugins.generic.customBlock.nameRequired">Özel blok adı gerekli.</message>
+	<message key="plugins.generic.customBlock.nameRegEx">Özel blok adı sadece harf, sayı ve kısa çizgi / alt çizgi içermelidir.</message>
 </locale>
