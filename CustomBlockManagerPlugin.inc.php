@@ -87,7 +87,7 @@ class CustomBlockManagerPlugin extends GenericPlugin {
 	function callbackLoadCategory($hookName, $args) {
 		$category =& $args[0];
 		$plugins =& $args[1];
-		$request =& $this->getRequest();
+		$request = Application::getRequest();
 
 		switch ($category) {
 			case 'blocks': // The system is registering block plugins
