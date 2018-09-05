@@ -75,9 +75,9 @@ class CustomBlockPlugin extends BlockPlugin {
 	/**
 	 * @copydoc LazyLoadPlugin::getEnabled()
 	 */
-	function getEnabled() {
+	function getEnabled($contextId = null) {
 		if (!Config::getVar('general', 'installed')) return true;
-		return parent::getEnabled();
+		return parent::getEnabled($contextId);
 	}
 
 	/**
