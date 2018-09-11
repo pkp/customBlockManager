@@ -115,21 +115,5 @@ class CustomBlockPlugin extends BlockPlugin {
 		return parent::getContents($templateMgr, $request);
 
 	}
-
-	/**
-	 * @copydoc BlockPlugin::getBlockContext()
-	 */
-	function getBlockContext() {
-		if (!Config::getVar('general', 'installed')) return BLOCK_CONTEXT_SIDEBAR;
-		return parent::getBlockContext();
-	}
-
-	/**
-	 * @copydoc BlockPlugin::getSeq()
-	 */
-	function getSeq($contextId = null) {
-		if (!Config::getVar('general', 'installed')) return 1;
-		return parent::getSeq($contextId);
-	}
 }
 
