@@ -20,4 +20,10 @@
 	<message key="plugins.generic.customBlock.content">Conteúdo</message>
 	<message key="plugins.generic.customBlock.nameSuffix">(Plugin Personalização Bloco)</message>
 	<message key="plugins.generic.customBlock.description">Este é um bloco gerado por utilizador.</message>
+	<message key="plugins.generic.customBlockManager.manage">Gerir Blocos Personalziados</message>
+	<message key="plugins.generic.customBlockManager.description">Este plugin permite gerir (adicionar, editar e apagar) blocos personalizados para a barra lateral.</message>
+	<message key="plugins.generic.customBlockManager.customBlocks">Blocos Personalizados</message>
+	<message key="plugins.generic.customBlockManager.noneCreated">Nenhum bloco personalizado criado.</message>
+	<message key="plugins.generic.customBlock.nameRequired">O nome para o bloco personalizado é obrigatório.</message>
+	<message key="plugins.generic.customBlock.nameRegEx">O nome do bloco personalizado só pode conter letras, números e hífenes ou sublinhados.</message>
 </locale>
