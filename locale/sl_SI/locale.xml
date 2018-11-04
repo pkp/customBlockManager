@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * plugins/generic/customBlockManager/locale/sl_SI/locale.xml
+  *
+  * Copyright (c) 2014-2018 Simon Fraser University
+  * Copyright (c) 2003-2018 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings.
+  -->
+ 
+<locale name="sl_SI" full_name="Slovenščina">
+	<message key="plugins.generic.customBlockManager.displayName">Upravljalec uporabniških blokov</message>
+	<message key="plugins.generic.customBlockManager.manage">Upravljaj uporabniške bloke</message>
+	<message key="plugins.generic.customBlockManager.description">Vtičnik omogoča, da upravljate (dodate, spreminjate in brišete) uporabniške bloke na stranskem meniju.</message>
+	<message key="plugins.generic.customBlockManager.customBlocks">Uporabniški bloki</message>	
+	<message key="plugins.generic.customBlockManager.blockName">Ime bloka</message>
+	<message key="plugins.generic.customBlockManager.addBlock">Dodaj blok</message>	
+	<message key="plugins.generic.customBlockManager.noneCreated">Ni nobenega uporabniškega bloka.</message>	
+	
+	<message key="plugins.generic.customBlock.content">Vsebina</message>
+	<message key="plugins.generic.customBlock.nameSuffix">(Uporabniški blok)</message>
+	<message key="plugins.generic.customBlock.description">To blok, ki ga je ustvaril uporabnik.</message>
+	<message key="plugins.generic.customBlock.nameRequired">Ime bloka je obvezno.</message>
+	<message key="plugins.generic.customBlock.nameRegEx">Ime bloka lahko vsebuje le črke, številke in pomišljaj/podčrtaj.</message>
+</locale>
