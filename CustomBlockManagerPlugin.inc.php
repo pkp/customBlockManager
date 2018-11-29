@@ -60,10 +60,9 @@ class CustomBlockManagerPlugin extends GenericPlugin {
 					// Loop through each custom block and register it
 					$i=0;
 					foreach ($blocks as $block) {
-						$blockPlugin = new CustomBlockPlugin($block, $this);
 						PluginRegistry::register(
 							'blocks',
-							$blockPlugin,
+							new CustomBlockPlugin($block, $this),
 							$this->getPluginPath()
 						);
 					}
