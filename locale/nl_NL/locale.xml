@@ -14,10 +14,16 @@
  
 <locale name="nl_NL" full_name="Nederlands">
 	<message key="plugins.generic.customBlockManager.displayName">Eigen blokken beheren</message>
-	<message key="plugins.generic.customBlockManager.blockName">Naam van het blok</message>	
+	<message key="plugins.generic.customBlockManager.manage">Beheer eigen blokken</message>
+	<message key="plugins.generic.customBlockManager.description">Met deze plugin kan u eigen blokken voor de sidebar beheren (toevoegen, bewerken en verwijderen).</message>
+	<message key="plugins.generic.customBlockManager.customBlocks">Eigen blokken</message>	
+	<message key="plugins.generic.customBlockManager.blockName">Naam van het blok</message>
 	<message key="plugins.generic.customBlockManager.addBlock">Nieuw blok</message>	
-
+	<message key="plugins.generic.customBlockManager.noneCreated">Er zijn geen eigen blokken gemaakt.</message>	
+	
 	<message key="plugins.generic.customBlock.content">Inhoud</message>
 	<message key="plugins.generic.customBlock.nameSuffix">(Eigen blokken plugin)</message>
 	<message key="plugins.generic.customBlock.description">Dit is een zelfgemaakt blok.</message>
+	<message key="plugins.generic.customBlock.nameRequired">Een naam is verplicht voor het eigen blok.</message>
+	<message key="plugins.generic.customBlock.nameRegEx">De naam van het eigen blok mag uitsluitend letters, cijfers en koppeltekens of liggende streepjes bevatten.</message>
 </locale>
