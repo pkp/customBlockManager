@@ -45,7 +45,7 @@ class CustomBlockManagerPlugin extends GenericPlugin {
 				$this->import('CustomBlockPlugin');
 
 				// Ensure that there is a context (journal or press)
-				if ($request = Application::getRequest()) {
+				if ($request = Application::get()->getRequest()) {
 					if ($mainContextId) {
 						$contextId = $mainContextId;
 					} else {
@@ -144,6 +144,6 @@ class CustomBlockManagerPlugin extends GenericPlugin {
 	 * @return boolean
 	 */
 	function isSitePlugin() {
-		return !Application::getRequest()->getContext();
+		return !Application::get()->getRequest()->getContext();
 	}
 }
