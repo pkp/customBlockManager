@@ -119,9 +119,9 @@ class CustomBlockPlugin extends BlockPlugin {
 	/**
 	 * @copydoc BlockPlugin::getBlockContext()
 	 */
-	function getBlockContext() {
+	function getBlockContext($contextId = null) {
 		if (!Config::getVar('general', 'installed')) return BLOCK_CONTEXT_SIDEBAR;
-		return parent::getBlockContext();
+		return parent::getBlockContext($contextId);
 	}
 
 	/**
