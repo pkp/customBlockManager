@@ -1,0 +1,48 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2019-11-19T11:04:58+00:00\n"
+"PO-Revision-Date: 2019-11-19T11:04:58+00:00\n"
+"Language: \n"
+
+msgid "plugins.generic.customBlockManager.displayName"
+msgstr "Gestore di blocchi personalizzati"
+
+msgid "plugins.generic.customBlockManager.manage"
+msgstr "Gestisci i blocchi personalizati"
+
+msgid "plugins.generic.customBlockManager.description"
+msgstr "Questo plugin permette di gestire blocchi personalizzati sulle barre laterali. È possibile modificare i blocchi nelle impostazioni di ciascun plugin creato."
+
+msgid "plugins.generic.customBlockManager.customBlocks"
+msgstr "Blocchi personalizzati"
+
+msgid "plugins.generic.customBlockManager.blockName"
+msgstr "Nome del blocco"
+
+msgid "plugins.generic.customBlockManager.addBlock"
+msgstr "Aggiungi un blocco"
+
+msgid "plugins.generic.customBlockManager.noneCreated"
+msgstr "Nessun blocco personalizzato è stato creato"
+
+msgid "plugins.generic.customBlock.content"
+msgstr "Contenuto"
+
+msgid "plugins.generic.customBlock.nameSuffix"
+msgstr "(blocco personalizzato)"
+
+msgid "plugins.generic.customBlock.description"
+msgstr "Questo è un blocco generato dall'utente."
+
+msgid "plugins.generic.customBlock.nameRequired"
+msgstr "Il nome del blocco personalizzato è necessario"
+
+msgid "plugins.generic.customBlock.nameRegEx"
+msgstr "Il nome del blocco personalizzato può contenere solo lettere, numeri e trattini alti o bassi."
