@@ -69,9 +69,9 @@ class CustomBlockForm extends Form {
 	}
 
 	/**
-	 * Save form values into the database
+	 * @copydoc Form::execute()
 	 */
-	function execute() {
+	function execute(...$functionArgs) {
 		$plugin = $this->plugin;
 		$contextId = $this->contextId;
 		if (!$plugin) {
@@ -93,6 +93,8 @@ class CustomBlockForm extends Form {
 
 		// update custom block plugin content
 		$plugin->updateSetting($contextId, 'blockContent', $this->getData('blockContent'));
+
+		parent::execute(...$functionArgs);
 	}
 }
 
