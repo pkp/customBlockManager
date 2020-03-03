@@ -24,5 +24,4 @@
 	<message key="plugins.generic.customBlock.nameSuffix">(Bloque Personalizado)</message>
 	<message key="plugins.generic.customBlock.description">Este es un Bloque generado por el usuario.</message>
 	<message key="plugins.generic.customBlock.nameRequired">Se requiere el nombre del bloque personalizado.</message>
-	<message key="plugins.generic.customBlock.nameRegEx">El nombre del bloque personalizado sólo debe contener letras, números y guiones/guiones bajos.</message>
 </locale>

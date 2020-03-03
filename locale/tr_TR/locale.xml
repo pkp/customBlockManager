@@ -25,5 +25,4 @@
 	<message key="plugins.generic.customBlockManager.customBlocks">Özel Bloklar</message>
 	<message key="plugins.generic.customBlockManager.noneCreated">Özel blok oluşturulmadı.</message>
 	<message key="plugins.generic.customBlock.nameRequired">Özel blok adı gerekli.</message>
-	<message key="plugins.generic.customBlock.nameRegEx">Özel blok adı sadece harf, sayı ve kısa çizgi / alt çizgi içermelidir.</message>
 </locale>

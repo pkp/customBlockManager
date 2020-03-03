@@ -24,5 +24,4 @@
 	<message key="plugins.generic.customBlock.nameSuffix">(Uporabniški blok)</message>
 	<message key="plugins.generic.customBlock.description">To blok, ki ga je ustvaril uporabnik.</message>
 	<message key="plugins.generic.customBlock.nameRequired">Ime bloka je obvezno.</message>
-	<message key="plugins.generic.customBlock.nameRegEx">Ime bloka lahko vsebuje le črke, številke in pomišljaj/podčrtaj.</message>
 </locale>

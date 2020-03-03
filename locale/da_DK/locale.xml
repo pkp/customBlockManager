@@ -24,5 +24,4 @@
 	<message key="plugins.generic.customBlock.nameSuffix">(Brugerdefineret blok)</message>
 	<message key="plugins.generic.customBlock.description">Dette er et brugerdefineret element.</message>
 	<message key="plugins.generic.customBlock.nameRequired">Et brugerdefineret blok-navn er påkrævet.</message>
-	<message key="plugins.generic.customBlock.nameRegEx">Det brugerdefinerede blok-navn må indeholde bogstaver, numre og bindestreg/understregning.</message>
 </locale>

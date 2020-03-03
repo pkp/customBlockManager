@@ -19,7 +19,8 @@
 	{csrf}
 	{fbvFormArea id="customBlocksFormArea" class="border"}
 		{fbvFormSection}
-			{fbvElement type="text" label="plugins.generic.customBlockManager.blockName" id="blockName" value=$blockName maxlength="40" inline=true size=$fbvStyles.size.MEDIUM}
+			{fbvElement type="hidden" id="blockName" value=$blockName}
+			{fbvElement type="text" label="plugins.generic.customBlockManager.blockName" id="blockDisplayName" value=$blockDisplayName maxlength="40" inline=true size=$fbvStyles.size.MEDIUM}
 		{/fbvFormSection}
 		{fbvFormSection label="plugins.generic.customBlock.content" for="blockContent"}
 			{fbvElement type="textarea" multilingual=true name="blockContent" id="blockContent" value=$blockContent rich=true height=$fbvStyles.height.TALL}

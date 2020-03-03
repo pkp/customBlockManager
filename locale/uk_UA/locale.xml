@@ -24,5 +24,4 @@
 	<message key="plugins.generic.customBlock.nameSuffix">(власний блок)</message>
 	<message key="plugins.generic.customBlock.description">Це створений користувачем блок.</message>
 	<message key="plugins.generic.customBlock.nameRequired">Назва власного блоку обов'язкова.</message>
-	<message key="plugins.generic.customBlock.nameRegEx">Назва власного блоку повинна містити лише літери, цифри, дефіс та підкреслювання.</message>
 </locale>

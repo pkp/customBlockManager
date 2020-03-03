@@ -24,5 +24,4 @@
 	<message key="plugins.generic.customBlock.nameSuffix">(Benutzerdefinierter Block)</message>
 	<message key="plugins.generic.customBlock.description">Dies ist ein selbst angelegter Block.</message>
 	<message key="plugins.generic.customBlock.nameRequired">Der Name des benutzerdefinierten Blocks wird benötigt.</message>
-	<message key="plugins.generic.customBlock.nameRegEx">Der Name des benutzerdefinierten Blocks darf nur Buchstaben, Ziffern und Bindestriche/Unterstriche enthalten.</message>
 </locale>

@@ -24,5 +24,4 @@
 	<message key="plugins.generic.customBlock.nameSuffix">(Mukautettu lohko)</message>
 	<message key="plugins.generic.customBlock.description">Tämä on käyttäjän luoma lohko.</message>
 	<message key="plugins.generic.customBlock.nameRequired">Mukautetun lohkon nimi vaaditaan.</message>
-	<message key="plugins.generic.customBlock.nameRegEx">Mukautetun lohkon nimi voi sisältää vain kirjaimia, numeroita ja yhdysmerkkejä/alaviivoja.</message>
 </locale>

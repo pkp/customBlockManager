@@ -25,5 +25,4 @@
 	<message key="plugins.generic.customBlock.nameSuffix">(Eigen blokken plugin)</message>
 	<message key="plugins.generic.customBlock.description">Dit is een zelfgemaakt blok.</message>
 	<message key="plugins.generic.customBlock.nameRequired">Een naam is verplicht voor het eigen blok.</message>
-	<message key="plugins.generic.customBlock.nameRegEx">De naam van het eigen blok mag uitsluitend letters, cijfers en koppeltekens of liggende streepjes bevatten.</message>
 </locale>
