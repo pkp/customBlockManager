@@ -14,12 +14,6 @@
  *
  */
 
-// No constant name in core 3.2 (!?!), per https://github.com/pkp/pkp-lib/commit/a76bac72ed068a1d1866398d20cdf28c4977249f#diff-70caff5ef9a513397af1833a3e2a3c7c
-import('lib.pkp.classes.plugins.BlockPlugin');
-if (!defined('BLOCK_CONTEXT_SIDEBAR')) {
-	define('BLOCK_CONTEXT_SIDEBAR', 1);
-}
-
 import('lib.pkp.classes.plugins.GenericPlugin');
 
 class CustomBlockManagerPlugin extends GenericPlugin {
@@ -204,7 +198,8 @@ class CustomBlockManagerPlugin extends GenericPlugin {
 						foreach ($settings as $setting_name => $setting_value) {
 							switch ($setting_name) {
 								case 'context':
-									$setting_value = BLOCK_CONTEXT_SIDEBAR;
+									$pluginSettingsDao->deleteSetting($context->getId(), $blockName, $setting_name);
+									break;
 								case 'blockContent':
 								case 'enabled':
 								case 'seq':

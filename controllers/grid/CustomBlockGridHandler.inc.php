@@ -207,7 +207,6 @@ class CustomBlockGridHandler extends GridHandler {
 		// Delete all the entries for this block plugin
 		$pluginSettingsDao = DAORegistry::getDAO('PluginSettingsDAO');
 		$pluginSettingsDao->deleteSetting($contextId, $blockName, 'enabled');
-		$pluginSettingsDao->deleteSetting($contextId, $blockName, 'context');
 		$pluginSettingsDao->deleteSetting($contextId, $blockName, 'seq');
 		$pluginSettingsDao->deleteSetting($contextId, $blockName, 'blockContent');
 
