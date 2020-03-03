@@ -43,6 +43,3 @@ msgstr "Това е егенериран от потребителя блок."
 
 msgid "plugins.generic.customBlock.nameRequired"
 msgstr "Изисква се име за потребителския блок."
-
-msgid "plugins.generic.customBlock.nameRegEx"
-msgstr "Името на потребителския блок трябва да съдърожа само букви, цифри и долно тире."

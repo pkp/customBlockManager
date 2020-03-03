@@ -43,6 +43,3 @@ msgstr "Este es un Bloque generado por el usuario."
 
 msgid "plugins.generic.customBlock.nameRequired"
 msgstr "Se requiere el nombre del bloque personalizado."
-
-msgid "plugins.generic.customBlock.nameRegEx"
-msgstr "El nombre del bloque personalizado sólo debe contener letras, números y guiones/guiones bajos."

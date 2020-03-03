@@ -43,6 +43,3 @@ msgstr "Nema prilagođenih blokova."
 
 msgid "plugins.generic.customBlock.nameRequired"
 msgstr "Ime bloka je oavezno."
-
-msgid "plugins.generic.customBlock.nameRegEx"
-msgstr "Ime bloka može sadržati samo slova, brojeve, crte i podvlake."

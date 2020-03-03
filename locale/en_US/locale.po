@@ -43,6 +43,3 @@ msgstr "This is a user-generated block."
 
 msgid "plugins.generic.customBlock.nameRequired"
 msgstr "The custom block name is required."
-
-msgid "plugins.generic.customBlock.nameRegEx"
-msgstr "The custom block name must contain only letters, numbers, and hyphens/underscores."

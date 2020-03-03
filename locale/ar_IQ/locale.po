@@ -43,6 +43,3 @@ msgstr "هذه كتلة مولدة من قبل المستخدم."
 
 msgid "plugins.generic.customBlock.nameRequired"
 msgstr "اسم الكتلة المخصصة مطلوب حتماً."
-
-msgid "plugins.generic.customBlock.nameRegEx"
-msgstr "اسم الكتلة المخصصة يجب أن يقتصر على الحروف والأرقام وعلامة الطرح والخط التحتاني."

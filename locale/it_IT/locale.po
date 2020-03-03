@@ -46,6 +46,3 @@ msgstr "Questo è un blocco generato dall'utente."
 
 msgid "plugins.generic.customBlock.nameRequired"
 msgstr "Inserire il nome del blocco personalizzato."
-
-msgid "plugins.generic.customBlock.nameRegEx"
-msgstr "Il nome del blocco personalizzato può contenere solo lettere, numeri e trattini alti o bassi."

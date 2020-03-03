@@ -43,6 +43,3 @@ msgstr "Tämä on käyttäjän luoma lohko."
 
 msgid "plugins.generic.customBlock.nameRequired"
 msgstr "Mukautetun lohkon nimi vaaditaan."
-
-msgid "plugins.generic.customBlock.nameRegEx"
-msgstr "Mukautetun lohkon nimi voi sisältää vain kirjaimia, numeroita ja yhdysmerkkejä/alaviivoja."

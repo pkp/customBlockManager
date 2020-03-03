@@ -32,10 +32,6 @@ msgstr "(Plugin Custom Block)"
 msgid "plugins.generic.customBlock.description"
 msgstr "Ini adalah user-generated block."
 
-msgid "plugins.generic.customBlock.nameRegEx"
-msgstr ""
-"Nama blok baru hanya boleh mengandung huruf, angka, hyphens/underscores."
-
 msgid "plugins.generic.customBlock.nameRequired"
 msgstr "Nama blok baru wajib diisi."
 

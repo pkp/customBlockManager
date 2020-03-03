@@ -43,6 +43,3 @@ msgstr "To blok, ki ga je ustvaril uporabnik."
 
 msgid "plugins.generic.customBlock.nameRequired"
 msgstr "Ime bloka je obvezno."
-
-msgid "plugins.generic.customBlock.nameRegEx"
-msgstr "Ime bloka lahko vsebuje le črke, številke in pomišljaj/podčrtaj."

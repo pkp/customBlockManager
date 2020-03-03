@@ -46,8 +46,3 @@ msgstr "Dette er et brugerdefineret blok."
 
 msgid "plugins.generic.customBlock.nameRequired"
 msgstr "Et brugerdefineret blok-navn er påkrævet."
-
-msgid "plugins.generic.customBlock.nameRegEx"
-msgstr ""
-"Det brugerdefinerede blok-navn må kun indeholde bogstaver, numre og "
-"bindestreg/understregning."

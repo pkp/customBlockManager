@@ -43,6 +43,3 @@ msgstr "Αυτό είναι δομικό στοιχείο δημιουργημέ
 
 msgid "plugins.generic.customBlock.nameRequired"
 msgstr "Το όνομα του δομικού στοιχείου είναι απαραίτητο."
-
-msgid "plugins.generic.customBlock.nameRegEx"
-msgstr "Το όνομα του δομικού στοιχείου πρέπει να περιλαμβάνει μόνο γράμματα, αριθμούς και παύλες/κάτω παύλες."

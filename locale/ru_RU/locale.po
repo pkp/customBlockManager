@@ -43,6 +43,3 @@ msgstr "Это пользовательский блок."
 
 msgid "plugins.generic.customBlock.nameRequired"
 msgstr "Имя пользовательского блока обязательно."
-
-msgid "plugins.generic.customBlock.nameRegEx"
-msgstr "Имя пользовательского блока должно содержать только буквы, цифры, дефисы и подчеркивания."

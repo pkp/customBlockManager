@@ -43,6 +43,3 @@ msgstr "Nenhum bloco personalizado criado."
 
 msgid "plugins.generic.customBlock.nameRequired"
 msgstr "O nome do bloco personalizado é obrigatório."
-
-msgid "plugins.generic.customBlock.nameRegEx"
-msgstr "O nome do bloco personalizado só pode conter letras, números e hífenes ou sublinhados."

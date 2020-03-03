@@ -46,6 +46,3 @@ msgstr "Ez egy felhasználó által generált blokk."
 
 msgid "plugins.generic.customBlock.nameRequired"
 msgstr "Egyéni blokknév kötelező."
-
-msgid "plugins.generic.customBlock.nameRegEx"
-msgstr "Az egyéni blokknév csak betűket, számokat és kötőjeleket/alulhúzásokat tartalmazhat."

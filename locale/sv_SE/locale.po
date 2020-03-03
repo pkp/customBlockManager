@@ -43,6 +43,3 @@ msgstr "Det här är ett användargenererat block."
 
 msgid "plugins.generic.customBlock.nameRequired"
 msgstr "Ett namn på det anpassade blocket krävs."
-
-msgid "plugins.generic.customBlock.nameRegEx"
-msgstr "Det anpassade blockets namn får bara innehålla bokstäver, siffror och bindestreck/understreck."

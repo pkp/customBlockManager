@@ -43,6 +43,3 @@ msgstr "Özel blok oluşturulmadı."
 
 msgid "plugins.generic.customBlock.nameRequired"
 msgstr "Özel blok adı gerekli."
-
-msgid "plugins.generic.customBlock.nameRegEx"
-msgstr "Özel blok adı sadece harf, sayı ve kısa çizgi / alt çizgi içermelidir."

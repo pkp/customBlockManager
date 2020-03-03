@@ -19,6 +19,8 @@ import('lib.pkp.classes.plugins.BlockPlugin');
 class CustomBlockPlugin extends BlockPlugin {
 	/** @var string Name of this block plugin */
 	var $_blockName;
+	/** @var int Context ID */
+	var $_contextId;
 
 	/** @var CustomBlockManagerPlugin Parent plugin */
 	var $_parentPlugin;
@@ -27,10 +29,12 @@ class CustomBlockPlugin extends BlockPlugin {
 	 * Constructor
 	 * @param $blockName string Name of this block plugin.
 	 * @param $parentPlugin CustomBlockManagerPlugin Custom block plugin management plugin.
+	 * @param $contextId int The context in which this plugin lives
 	 */
-	function __construct($blockName, $parentPlugin) {
+	function __construct($blockName, $parentPlugin, $contextId) {
 		$this->_blockName = $blockName;
 		$this->_parentPlugin = $parentPlugin;
+		$this->_contextId = $contextId;
 		parent::__construct();
 	}
 
@@ -84,7 +88,7 @@ class CustomBlockPlugin extends BlockPlugin {
 	 * @copydoc Plugin::getDisplayName()
 	 */
 	function getDisplayName() {
-		return $this->_blockName . ' ' . __('plugins.generic.customBlock.nameSuffix');
+		return $this->getSetting($this->_contextId, 'blockDisplayName') . ' ' . __('plugins.generic.customBlock.nameSuffix');
 	}
 
 	/**

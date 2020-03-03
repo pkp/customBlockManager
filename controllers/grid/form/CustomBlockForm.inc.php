@@ -38,8 +38,7 @@ class CustomBlockForm extends Form {
 		// Add form checks
 		$this->addCheck(new FormValidatorPost($this));
 		$this->addCheck(new FormValidatorCSRF($this));
-		$this->addCheck(new FormValidator($this, 'blockName', 'required', 'plugins.generic.customBlock.nameRequired'));
-		$this->addCheck(new FormValidatorRegExp($this, 'blockName', 'required', 'plugins.generic.customBlock.nameRegEx', '/^[a-zA-Z0-9_-]+$/'));
+		$this->addCheck(new FormValidator($this, 'blockDisplayName', 'required', 'plugins.generic.customBlock.nameRequired'));
 	}
 
 	/**
@@ -49,23 +48,23 @@ class CustomBlockForm extends Form {
 		$contextId = $this->contextId;
 		$plugin = $this->plugin;
 
-		$templateMgr = TemplateManager::getManager();
-
 		$blockName = null;
 		$blockContent = null;
 		if ($plugin) {
 			$blockName = $plugin->getName();
+			$blockDisplayName = $plugin->getSetting($contextId, 'blockDisplayName');
 			$blockContent = $plugin->getSetting($contextId, 'blockContent');
 		}
 		$this->setData('blockContent', $blockContent);
 		$this->setData('blockName', $blockName);
+		$this->setData('blockDisplayName', $blockDisplayName);
 	}
 
 	/**
 	 * Assign form data to user-submitted data.
 	 */
 	function readInputData() {
-		$this->readUserVars(array('blockName', 'blockContent'));
+		$this->readUserVars(array('blockName', 'blockDisplayName', 'blockContent'));
 	}
 
 	/**
@@ -74,11 +73,13 @@ class CustomBlockForm extends Form {
 	function execute(...$functionArgs) {
 		$plugin = $this->plugin;
 		$contextId = $this->contextId;
+		$blockName = $this->getData('blockName');
 		if (!$plugin) {
 			// Create a new custom block plugin
 			import('plugins.generic.customBlockManager.CustomBlockPlugin');
 			$customBlockManagerPlugin = PluginRegistry::getPlugin('generic', CUSTOMBLOCKMANAGER_PLUGIN_NAME);
-			$plugin = new CustomBlockPlugin($this->getData('blockName'), $customBlockManagerPlugin);
+			$blockName = $customBlockManagerPlugin->createUniqueName();
+			$plugin = new CustomBlockPlugin($blockName, $customBlockManagerPlugin, $contextId);
 			// Default the block to being enabled
 			$plugin->setEnabled(true);
 
@@ -87,13 +88,13 @@ class CustomBlockForm extends Form {
 			$blocks = $customBlockManagerPlugin->getSetting($contextId, 'blocks');
 			if (!isset($blocks)) $blocks = array();
 
-			array_push($blocks, $this->getData('blockName'));
+			$blocks[] = $blockName;
 			$customBlockManagerPlugin->updateSetting($contextId, 'blocks', $blocks);
 		}
 
 		// update custom block plugin content
 		$plugin->updateSetting($contextId, 'blockContent', $this->getData('blockContent'));
-
+		$plugin->updateSetting($contextId, 'blockDisplayName', $this->getData('blockDisplayName'));
 		parent::execute(...$functionArgs);
 	}
 }

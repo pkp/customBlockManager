@@ -1,6 +1,6 @@
 =============================================================
 === Custom Block Manager Plugin
-=== Version: 1.2
+=== Version: 1.3.1
 === Author: Juan Pablo Alperin <pkp@alperin.ca>
 === Co-Author: Bozana Bokan <bozana.bokan@cedis.fu-berlin.de>
 =============================================================
@@ -18,16 +18,17 @@ LICENSE for the complete terms of this license.
 System Requirements
 -------------------
 This plugin is compatible with...
- - OJS 3.0.x
- - OMP 1.2.x
- - OMP 1.1.x
+ - OJS 3.2.x
+ - OMP 3.2.x
+ - OPS 3.2.x
 
 Installation
 ------------
-To install the plugin:
+The Plugin Gallery is the recommended installation method.
+To install the plugin manually:
  - Unpack the plugin tar.gz file to your plugins/generic directory
  - From your application's installation directory, run the upgrade script:
-    $ php tools/upgrade.php upgrade
+    $ php lib/pkp/tools/installPluginVersion.php plugins/generic/customBlockManager/version.xml
    (NOTE: It is recommended to back up your database first.)
  - Enable the plugin by going to:
    Management > Website Settings > Plugins > Generic Plugins

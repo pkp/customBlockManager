@@ -43,6 +43,3 @@ msgstr "Це створений користувачем блок."
 
 msgid "plugins.generic.customBlock.nameRequired"
 msgstr "Назва власного блоку обов'язкова."
-
-msgid "plugins.generic.customBlock.nameRegEx"
-msgstr "Назва власного блоку повинна містити лише літери, цифри, дефіс та підкреслювання."

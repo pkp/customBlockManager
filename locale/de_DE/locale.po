@@ -43,6 +43,3 @@ msgstr "Dies ist ein selbst angelegter Block."
 
 msgid "plugins.generic.customBlock.nameRequired"
 msgstr "Der Name des benutzerdefinierten Blocks wird benötigt."
-
-msgid "plugins.generic.customBlock.nameRegEx"
-msgstr "Der Name des benutzerdefinierten Blocks darf nur Buchstaben, Ziffern und Bindestriche/Unterstriche enthalten."
