@@ -210,6 +210,7 @@ class CustomBlockGridHandler extends GridHandler {
 		$pluginSettingsDao->deleteSetting($contextId, $blockName, 'context');
 		$pluginSettingsDao->deleteSetting($contextId, $blockName, 'seq');
 		$pluginSettingsDao->deleteSetting($contextId, $blockName, 'blockContent');
+		$pluginSettingsDao->deleteSetting($contextId, $blockName, 'blockDisplayName');
 
 		// Remove this block plugin from the list of the custom block plugins
 		$customBlockManagerPlugin = $this->plugin;
