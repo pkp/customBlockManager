@@ -9,6 +9,10 @@
  *
  *}
 <div class="pkp_block block_custom" id="{$customBlockId|escape}">
+	<h2 class="pkp_screen_reader">
+		{translate key="plugins.generic.customBlockManager.displayName"}
+	</h2>
+
 	<div class="content">
 		{$customBlockContent}
 	</div>
