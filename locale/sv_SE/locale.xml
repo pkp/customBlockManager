@@ -24,5 +24,4 @@
 	<message key="plugins.generic.customBlock.nameSuffix">(Anpassat block)</message>
 	<message key="plugins.generic.customBlock.description">Det här är ett användargenererat block.</message>
 	<message key="plugins.generic.customBlock.nameRequired">Ett namn på det anpassade blocket krävs.</message>
-	<message key="plugins.generic.customBlock.nameRegEx">Det anpassade blockets namn får bara innehålla bokstäver, siffror och bindestreck/understreck.</message>
 </locale>

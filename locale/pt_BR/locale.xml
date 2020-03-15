@@ -25,5 +25,4 @@
 	<message key="plugins.generic.customBlockManager.customBlocks">Blocos Personalizados</message>
 	<message key="plugins.generic.customBlockManager.noneCreated">Não há blocos personalizados criados.</message>
 	<message key="plugins.generic.customBlock.nameRequired">O nome do bloco personalizado é necessário.</message>
-	<message key="plugins.generic.customBlock.nameRegEx">O nome do bloco personalizado deve conter apenas letras, números e hífens / sublinhados.</message>
 </locale>

@@ -24,5 +24,4 @@
 	<message key="plugins.generic.customBlock.nameSuffix">(إضافة الكتلة المخصصة)</message>
 	<message key="plugins.generic.customBlock.description">هذه كتلة مولدة من قبل المستخدم.</message>
 	<message key="plugins.generic.customBlock.nameRequired">اسم الكتلة المخصصة مطلوب حتماً.</message>
-	<message key="plugins.generic.customBlock.nameRegEx">اسم الكتلة المخصصة يجب أن يقتصر على الحروف والأرقام وعلامة الطرح والخط التحتاني.</message>
 </locale>

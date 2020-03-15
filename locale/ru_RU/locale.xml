@@ -24,5 +24,4 @@
 	<message key="plugins.generic.customBlock.nameSuffix">(пользовательский блок)</message>
 	<message key="plugins.generic.customBlock.description">Это пользовательский блок.</message>
 	<message key="plugins.generic.customBlock.nameRequired">Имя пользовательского блока обязательно.</message>
-	<message key="plugins.generic.customBlock.nameRegEx">Имя пользовательского блока должно содержать только буквы, цифры, дефисы и подчеркивания.</message>
 </locale>

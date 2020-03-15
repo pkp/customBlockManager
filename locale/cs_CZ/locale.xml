@@ -24,5 +24,4 @@
 	<message key="plugins.generic.customBlock.nameSuffix">(Plugin uživatelských panelů)</message>
 	<message key="plugins.generic.customBlockManager.description">Tento plugin vám umožňuje spravovat (přidávat, upravovat a odstraňovat) vlastní bloky v postranních panelech.</message>
 	<message key="plugins.generic.customBlock.nameRequired">Je třeba zadat jméno uživatelského bloku.</message>
-	<message key="plugins.generic.customBlock.nameRegEx">Název uživatelského bloku musí obsahovat pouze písmena, čísla a pomlčky/podtržítka.</message>
 </locale>

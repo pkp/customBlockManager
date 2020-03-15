@@ -68,8 +68,9 @@ class CustomBlockGridHandler extends GridHandler {
 		$blocks = $customBlockManagerPlugin->getSetting($contextId, 'blocks');
 		$gridData = array();
 		if (is_array($blocks)) foreach ($blocks as $block) {
+			$plugin = new CustomBlockPlugin($block, $customBlockManagerPlugin, $contextId);
 			$gridData[$block] = array(
-				'title' => $block
+				'title' => $plugin->getSetting($contextId, 'blockDisplayName')
 			);
 		}
 		$this->setGridDataElements($gridData);
@@ -134,7 +135,7 @@ class CustomBlockGridHandler extends GridHandler {
 	function editCustomBlock($args, $request) {
 		$blockName = $request->getUserVar('blockName');
 		$context = $request->getContext();
-		$contextId = $context ? $context->getId() : 0;
+		$contextId = $context ? $context->getId() : CONTEXT_ID_NONE;
 		$this->setupTemplate($request);
 
 		$customBlockPlugin = null;
@@ -142,7 +143,7 @@ class CustomBlockGridHandler extends GridHandler {
 		if ($blockName) {
 			// Create the custom block plugin
 			import('plugins.generic.customBlockManager.CustomBlockPlugin');
-			$customBlockPlugin = new CustomBlockPlugin($blockName, CUSTOMBLOCKMANAGER_PLUGIN_NAME);
+			$customBlockPlugin = new CustomBlockPlugin($blockName, $this->plugin, $contextId);
 		}
 
 		// Create and present the edit form
@@ -171,7 +172,7 @@ class CustomBlockGridHandler extends GridHandler {
 		if ($pluginName) {
 			// Create the custom block plugin
 			import('plugins.generic.customBlockManager.CustomBlockPlugin');
-			$customBlockPlugin = new CustomBlockPlugin($pluginName, CUSTOMBLOCKMANAGER_PLUGIN_NAME);
+			$customBlockPlugin = new CustomBlockPlugin($pluginName, $this->plugin, $contextId);
 		}
 
 		// Create and populate the form
@@ -209,6 +210,7 @@ class CustomBlockGridHandler extends GridHandler {
 		$pluginSettingsDao->deleteSetting($contextId, $blockName, 'context');
 		$pluginSettingsDao->deleteSetting($contextId, $blockName, 'seq');
 		$pluginSettingsDao->deleteSetting($contextId, $blockName, 'blockContent');
+		$pluginSettingsDao->deleteSetting($contextId, $blockName, 'blockDisplayName');
 
 		// Remove this block plugin from the list of the custom block plugins
 		$customBlockManagerPlugin = $this->plugin;

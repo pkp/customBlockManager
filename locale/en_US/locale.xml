@@ -24,5 +24,4 @@
 	<message key="plugins.generic.customBlock.nameSuffix">(Custom Block)</message>
 	<message key="plugins.generic.customBlock.description">This is a user-generated block.</message>
 	<message key="plugins.generic.customBlock.nameRequired">The custom block name is required.</message>
-	<message key="plugins.generic.customBlock.nameRegEx">The custom block name must contain only letters, numbers, and hyphens/underscores.</message>
 </locale>
