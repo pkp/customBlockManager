@@ -30,9 +30,13 @@ install:
   - lib/pkp/tools/travis/install-composer-dependencies.sh
   - npm i g -npm && npm install && npm run build
   # Make sure we're using the current checkout of this repo rather than the built-in OJS/OMP version
-  - rm -rf ~/${APPLICATION}/plugins/generic/customBlocks
-  - ln -s ${TRAVIS_BUILD_DIR} ~/${APPLICATION}/plugins/generic/customBlocks
+  - rm -rf ~/${APPLICATION}/plugins/generic/customBlockManager
+  - ln -s ${TRAVIS_BUILD_DIR} ~/${APPLICATION}/plugins/generic/customBlockManager
   # Install OJS/OMP & prep data environment
   - $(npm bin)/cypress run --spec "cypress/tests/data/10-Installation.spec.js,cypress/tests/data/20-CreateContext.spec.js"
 script:
-  - $(npm bin)/cypress run --config integrationFolder=plugins/generic/customBlocks/cypress/tests
+  - $(npm bin)/cypress run --config integrationFolder=plugins/generic/customBlockManager/cypress/tests
+
+after_failure:
+  - sudo apt-get install sharutils
+  - tar cz cypress/screenshots | uuencode /dev/stdout

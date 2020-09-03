@@ -11,7 +11,8 @@ describe('Custom Block Manager plugin tests', function() {
 	it('Creates and exercises a custom block', function() {
 		cy.login('admin', 'admin', 'publicknowledge');
 
-		cy.get('.app__nav a').contains('Website').click();
+		cy.get('ul[id="navigationPrimary"] a:contains("Settings")').click();
+		cy.get('ul[id="navigationPrimary"] a:contains("Website")').click();
 		cy.get('button[id="plugins-button"]').click();
 
 		// Find and enable the plugin
@@ -36,9 +37,10 @@ describe('Custom Block Manager plugin tests', function() {
 
 		// FIXME: The settings area has to be reloaded before the new block will appear.a
 		// This click should be unnecessary.
-		cy.get('.app__nav a').contains('Website').click();
+		cy.get('ul[id="navigationPrimary"] a:contains("Settings")').click();
+		cy.get('ul[id="navigationPrimary"] a:contains("Website")').click();
 		cy.get('#appearance > .pkpTabs > .pkpTabs__buttons > #setup-button').click();
-		cy.get('#setup span:contains("test-custom-block")').parent().find('input[type=checkbox]').click();
+		cy.get('input[value ^= "test-custom-block"]').click();
 		cy.get('#setup button:contains("Save")').click();
 		cy.waitJQuery();
 
