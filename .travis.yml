@@ -36,3 +36,7 @@ install:
   - $(npm bin)/cypress run --spec "cypress/tests/data/10-Installation.spec.js,cypress/tests/data/20-CreateContext.spec.js"
 script:
   - $(npm bin)/cypress run --config integrationFolder=plugins/generic/customBlockManager/cypress/tests
+
+after_failure:
+  - sudo apt-get install sharutils
+  - tar cz cypress/screenshots | uuencode /dev/stdout
