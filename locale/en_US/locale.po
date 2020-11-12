@@ -46,3 +46,9 @@ msgstr "The custom block name is required."
 
 msgid "plugins.generic.customBlock.nameRegEx"
 msgstr "The custom block name must contain only letters, numbers, and hyphens/underscores."
+
+msgid "plugins.generic.customBlock.showName"
+msgstr "Show Name"
+
+msgid "plugins.generic.customBlock.showName.description"
+msgstr "Show the name of this block above the block content."
