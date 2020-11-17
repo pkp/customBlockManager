@@ -9,6 +9,7 @@
  *
  *}
 <div class="pkp_block block_custom" id="{$customBlockId|escape}">
+	<h2 class="title{if !$showName} pkp_screen_reader{/if}">{$customBlockTitle}</h2>
 	<div class="content">
 		{$customBlockContent}
 	</div>
