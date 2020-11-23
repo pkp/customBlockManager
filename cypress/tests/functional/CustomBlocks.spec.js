@@ -25,7 +25,7 @@ describe('Custom Block Manager plugin tests', function() {
 		// Create a new custom block.
 		cy.get('a:contains("Add Block")').click();
 		cy.wait(2000); // Avoid occasional failure due to form init taking time
-		cy.get('form[id^="customBlockForm"] input[id^="blockTitle-"]').type('Test Custom Block');
+		cy.get('form[id^="customBlockForm"] input[id^="blockTitle-en_US-"]').type('Test Custom Block');
 		cy.get('textarea[name="blockContent[en_US]"]').then(node => {
 			cy.setTinyMceContent(node.attr('id'), 'Here is my custom block.');
 		});
