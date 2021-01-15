@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-19T11:04:59+00:00\n"
-"PO-Revision-Date: 2020-10-19 15:42+0000\n"
+"PO-Revision-Date: 2021-01-16 22:53+0000\n"
 "Last-Translator: Eirik Hanssen <eirikh@oslomet.no>\n"
 "Language-Team: Norwegian Bokmål <http://translate.pkp.sfu.ca/projects/"
 "plugins/custom-block-manager-plugin/nb_NO/>\n"
@@ -53,3 +53,9 @@ msgstr ""
 
 msgid "plugins.generic.customBlockManager.manage"
 msgstr "Administrer egendefinerte blokker"
+
+msgid "plugins.generic.customBlock.showName.description"
+msgstr "Vis navnet på denne blokken over blokkinnholdet."
+
+msgid "plugins.generic.customBlock.showName"
+msgstr "Vis navn"
