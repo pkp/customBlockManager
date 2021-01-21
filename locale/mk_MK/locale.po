@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2021-01-06 08:52+0000\n"
+"PO-Revision-Date: 2021-01-22 07:53+0000\n"
 "Last-Translator: Mirko Spiroski <mspiroski@id-press.eu>\n"
 "Language-Team: Macedonian <http://translate.pkp.sfu.ca/projects/plugins/"
 "custom-block-manager-plugin/mk_MK/>\n"
@@ -55,4 +55,4 @@ msgid "plugins.generic.customBlockManager.manage"
 msgstr "Уреди прилагодливи блокови"
 
 msgid "plugins.generic.customBlockManager.displayName"
-msgstr "Прилагоден блок менаџер"
+msgstr "Прилагодлив блок менаџер"
