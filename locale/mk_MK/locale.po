@@ -1,0 +1,58 @@
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2021-01-22 07:53+0000\n"
+"Last-Translator: Mirko Spiroski <mspiroski@id-press.eu>\n"
+"Language-Team: Macedonian <http://translate.pkp.sfu.ca/projects/plugins/"
+"custom-block-manager-plugin/mk_MK/>\n"
+"Language: mk_MK\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n==1 || n%10==1 ? 0 : 1;\n"
+"X-Generator: Weblate 3.9.1\n"
+
+msgid "plugins.generic.customBlock.showName.description"
+msgstr "Прикажи име на овој блок над содржината на блокот."
+
+msgid "plugins.generic.customBlock.showName"
+msgstr "Прикажи име"
+
+msgid "plugins.generic.customBlock.nameRegEx"
+msgstr ""
+"Името на прилагодливиот блок мора да содржи само  букви, бројки и цртичка/"
+"долна црта."
+
+msgid "plugins.generic.customBlock.nameRequired"
+msgstr "Потребно е име на прилагодливиот блок."
+
+msgid "plugins.generic.customBlock.description"
+msgstr "Ова е кориснички-создаден блок."
+
+msgid "plugins.generic.customBlock.nameSuffix"
+msgstr "(Прилагодлив блок)"
+
+msgid "plugins.generic.customBlock.content"
+msgstr "Содржина"
+
+msgid "plugins.generic.customBlockManager.noneCreated"
+msgstr "Не се создадени прилагодливи блокови."
+
+msgid "plugins.generic.customBlockManager.addBlock"
+msgstr "Додади блок"
+
+msgid "plugins.generic.customBlockManager.blockName"
+msgstr "Име на блок"
+
+msgid "plugins.generic.customBlockManager.customBlocks"
+msgstr "Прилагодливи блокови"
+
+msgid "plugins.generic.customBlockManager.description"
+msgstr ""
+"Овој плагин ви дозоволува уредување (додади, корегирај, исфрли) на странични "
+"прилагодливи блокови."
+
+msgid "plugins.generic.customBlockManager.manage"
+msgstr "Уреди прилагодливи блокови"
+
+msgid "plugins.generic.customBlockManager.displayName"
+msgstr "Прилагодлив блок менаџер"

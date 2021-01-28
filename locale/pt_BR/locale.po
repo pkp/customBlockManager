@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-19T11:04:59+00:00\n"
-"PO-Revision-Date: 2020-06-06 02:31+0000\n"
+"PO-Revision-Date: 2020-12-01 20:51+0000\n"
 "Last-Translator: Diego José Macêdo <diegojmacedo@gmail.com>\n"
 "Language-Team: Portuguese (Brazil) <http://translate.pkp.sfu.ca/projects/"
 "plugins/custom-block-manager-plugin/pt_BR/>\n"
@@ -51,3 +51,9 @@ msgstr "O nome do bloco personalizado é necessário."
 
 msgid "plugins.generic.customBlock.nameRegEx"
 msgstr "O nome do bloco personalizado deve conter apenas letras, números e hífens / sublinhados."
+
+msgid "plugins.generic.customBlock.showName.description"
+msgstr "Mostrar o nome deste bloco acima do conteúdo do bloco."
+
+msgid "plugins.generic.customBlock.showName"
+msgstr "Mostrar nome"
