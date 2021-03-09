@@ -1,2 +1,58 @@
 msgid ""
-msgstr "X-Generator: Weblate\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit"
+msgstr ""
+"PO-Revision-Date: 2021-03-10 18:54+0000\n"
+"Last-Translator: Real Academia Galega <reacagal@gmail.com>\n"
+"Language-Team: Galician <http://translate.pkp.sfu.ca/projects/plugins/"
+"custom-block-manager-plugin/gl_ES/>\n"
+"Language: gl_ES\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 3.9.1\n"
+
+msgid "plugins.generic.customBlock.showName.description"
+msgstr "Amosa o nome deste bloque sobre o seu contido."
+
+msgid "plugins.generic.customBlock.showName"
+msgstr "Amosar nome"
+
+msgid "plugins.generic.customBlock.nameRegEx"
+msgstr ""
+"O nome do bloque personalizado debe conter só letras, números e guións/"
+"guións baixos."
+
+msgid "plugins.generic.customBlock.nameRequired"
+msgstr "É necesario o nome do bloque personalizado."
+
+msgid "plugins.generic.customBlock.description"
+msgstr "Este é un bloque xerado polo usuario."
+
+msgid "plugins.generic.customBlock.nameSuffix"
+msgstr "(Bloque Personalizado)"
+
+msgid "plugins.generic.customBlock.content"
+msgstr "Contido"
+
+msgid "plugins.generic.customBlockManager.noneCreated"
+msgstr "Non se crearon bloques personalizados."
+
+msgid "plugins.generic.customBlockManager.addBlock"
+msgstr "Engadir bloque"
+
+msgid "plugins.generic.customBlockManager.blockName"
+msgstr "Nome do bloque"
+
+msgid "plugins.generic.customBlockManager.customBlocks"
+msgstr "Bloques personalizados"
+
+msgid "plugins.generic.customBlockManager.description"
+msgstr ""
+"Este complemento permítelle xestionar (engadir, editar e eliminar) os "
+"bloques personalizados da barra lateral."
+
+msgid "plugins.generic.customBlockManager.manage"
+msgstr "Xestionar bloques personalizados"
+
+msgid "plugins.generic.customBlockManager.displayName"
+msgstr "Xestor de bloques personalizados"
