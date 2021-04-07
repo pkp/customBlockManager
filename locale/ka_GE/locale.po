@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2021-04-01 10:55+0000\n"
+"PO-Revision-Date: 2021-04-08 09:55+0000\n"
 "Last-Translator: Dimitri Gogelia <dimitri.gogelia@iliauni.edu.ge>\n"
 "Language-Team: Georgian <http://translate.pkp.sfu.ca/projects/plugins/"
 "custom-block-manager-plugin/ka_GE/>\n"
@@ -16,3 +16,43 @@ msgstr "შიგთავსი"
 
 msgid "plugins.generic.customBlock.showName"
 msgstr "სახელის ჩვენება"
+
+msgid "plugins.generic.customBlockManager.displayName"
+msgstr "მორგებული ბლოკების მმართველი"
+
+msgid "plugins.generic.customBlockManager.manage"
+msgstr "მართეთ მორგებული ბლოკები"
+
+msgid "plugins.generic.customBlockManager.description"
+msgstr ""
+"ეს პლაგინი საშუალებას გაძლევთ მართოთ (დაამატოთ, შეცვალოთ და წაშალოთ) "
+"მორგებული გვერდითი ზოლის ბლოკები."
+
+msgid "plugins.generic.customBlockManager.customBlocks"
+msgstr "მორგებული ბლოკები"
+
+msgid "plugins.generic.customBlockManager.blockName"
+msgstr "ბლოკის სახელი"
+
+msgid "plugins.generic.customBlockManager.addBlock"
+msgstr "ბლოკის დამატება"
+
+msgid "plugins.generic.customBlockManager.noneCreated"
+msgstr "არ არის შექმნილი ინდივიდუალური ბლოკები."
+
+msgid "plugins.generic.customBlock.nameSuffix"
+msgstr "(მორგებული ბლოკი)"
+
+msgid "plugins.generic.customBlock.description"
+msgstr "ეს არის მომხმარებლის მიერ შექმნილი ბლოკი."
+
+msgid "plugins.generic.customBlock.nameRequired"
+msgstr "საჭიროა მორგებული ბლოკის სახელი."
+
+msgid "plugins.generic.customBlock.nameRegEx"
+msgstr ""
+"მორგებული ბლოკის სახელი უნდა შეიცავდეს მხოლოდ ასოებს, რიცხვებს და დეფისებს / "
+"ქვედა ხაზებს."
+
+msgid "plugins.generic.customBlock.showName.description"
+msgstr "აჩვენეთ ამ ბლოკის სახელი ბლოკის შინაარსის ზემოთ."
