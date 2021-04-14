@@ -128,7 +128,7 @@ class CustomBlockManagerPlugin extends GenericPlugin {
 		return $templateMgr->fetchAjax(
 			'customBlockGridUrlGridContainer',
 			$dispatcher->url(
-				$request, ROUTE_COMPONENT, null,
+				$request, PKPApplication::ROUTE_COMPONENT, null,
 				'plugins.generic.customBlockManager.controllers.grid.CustomBlockGridHandler', 'fetchGrid'
 			)
 		);
