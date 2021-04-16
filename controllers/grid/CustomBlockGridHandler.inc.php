@@ -16,6 +16,8 @@
 import('lib.pkp.classes.controllers.grid.GridHandler');
 import('plugins.generic.customBlockManager.controllers.grid.CustomBlockGridRow');
 
+use \PKP\core\JSONMessage;
+
 class CustomBlockGridHandler extends GridHandler {
 	/** @var CustomBlockManagerPlugin The custom block manager plugin */
 	var $plugin;
