@@ -15,52 +15,56 @@
 
 import('lib.pkp.classes.controllers.grid.GridRow');
 
-class CustomBlockGridRow extends GridRow {
+class CustomBlockGridRow extends GridRow
+{
+    //
+    // Overridden template methods
+    //
+    /**
+     * @copydoc GridRow::initialize()
+     *
+     * @param null|mixed $template
+     */
+    public function initialize($request, $template = null)
+    {
+        parent::initialize($request, $template);
 
-	//
-	// Overridden template methods
-	//
-	/**
-	 * @copydoc GridRow::initialize()
-	 */
-	function initialize($request, $template = null) {
-		parent::initialize($request, $template);
+        $blockName = $this->getId();
+        if (!empty($blockName)) {
+            $router = $request->getRouter();
 
-		$blockName = $this->getId();
-		if (!empty($blockName)) {
-			$router = $request->getRouter();
+            // Create the "edit custom block" action
+            import('lib.pkp.classes.linkAction.request.AjaxModal');
+            $this->addAction(
+                new LinkAction(
+                    'editCustomBlock',
+                    new AjaxModal(
+                        $router->url($request, null, null, 'editCustomBlock', null, ['blockName' => $blockName]),
+                        __('grid.action.edit'),
+                        'modal_edit',
+                        true
+                    ),
+                    __('grid.action.edit'),
+                    'edit'
+                )
+            );
 
-			// Create the "edit custom block" action
-			import('lib.pkp.classes.linkAction.request.AjaxModal');
-			$this->addAction(
-				new LinkAction(
-					'editCustomBlock',
-					new AjaxModal(
-						$router->url($request, null, null, 'editCustomBlock', null, array('blockName' => $blockName)),
-						__('grid.action.edit'),
-						'modal_edit',
-						true),
-					__('grid.action.edit'),
-					'edit'
-				)
-			);
-
-			// Create the "delete custom block" action
-			import('lib.pkp.classes.linkAction.request.RemoteActionConfirmationModal');
-			$this->addAction(
-				new LinkAction(
-					'deleteCustomBlock',
-					new RemoteActionConfirmationModal(
-						$request->getSession(),
-						__('common.confirmDelete'),
-						__('grid.action.delete'),
-						$router->url($request, null, null, 'deleteCustomBlock', null, array('blockName' => $blockName)), 'modal_delete'
-					),
-					__('grid.action.delete'),
-					'delete'
-				)
-			);
-		}
-	}
+            // Create the "delete custom block" action
+            import('lib.pkp.classes.linkAction.request.RemoteActionConfirmationModal');
+            $this->addAction(
+                new LinkAction(
+                    'deleteCustomBlock',
+                    new RemoteActionConfirmationModal(
+                        $request->getSession(),
+                        __('common.confirmDelete'),
+                        __('grid.action.delete'),
+                        $router->url($request, null, null, 'deleteCustomBlock', null, ['blockName' => $blockName]),
+                        'modal_delete'
+                    ),
+                    __('grid.action.delete'),
+                    'delete'
+                )
+            );
+        }
+    }
 }
-

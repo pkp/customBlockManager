@@ -3,7 +3,7 @@
 /**
  * @defgroup plugins_generic_customBlockManager Custom Block Manager Plugin
  */
- 
+
 /**
  * @file plugins/generic/customBlockManager/index.php
  *
@@ -17,4 +17,3 @@
 
 require_once('CustomBlockManagerPlugin.inc.php');
 return new CustomBlockManagerPlugin();
-
