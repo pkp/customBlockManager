@@ -13,6 +13,11 @@
  * @brief Handle custom blocks grid row requests.
  */
 
+use PKP\linkAction\request\AjaxModal;
+use PKP\linkAction\LinkAction;
+use PKP\linkAction\request\RemoteActionConfirmationModal;
+
+// FIXME: add namespacing
 import('lib.pkp.classes.controllers.grid.GridRow');
 
 class CustomBlockGridRow extends GridRow
@@ -34,7 +39,6 @@ class CustomBlockGridRow extends GridRow
             $router = $request->getRouter();
 
             // Create the "edit custom block" action
-            import('lib.pkp.classes.linkAction.request.AjaxModal');
             $this->addAction(
                 new LinkAction(
                     'editCustomBlock',
@@ -50,7 +54,6 @@ class CustomBlockGridRow extends GridRow
             );
 
             // Create the "delete custom block" action
-            import('lib.pkp.classes.linkAction.request.RemoteActionConfirmationModal');
             $this->addAction(
                 new LinkAction(
                     'deleteCustomBlock',

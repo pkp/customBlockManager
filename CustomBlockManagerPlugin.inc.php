@@ -14,7 +14,9 @@
  *
  */
 
-import('lib.pkp.classes.plugins.GenericPlugin');
+use PKP\linkAction\LinkAction;
+use PKP\plugins\GenericPlugin;
+use PKP\linkAction\request\AjaxModal;
 
 class CustomBlockManagerPlugin extends GenericPlugin
 {
@@ -107,7 +109,6 @@ class CustomBlockManagerPlugin extends GenericPlugin
      */
     public function getActions($request, $actionArgs)
     {
-        import('lib.pkp.classes.linkAction.request.AjaxModal');
         $router = $request->getRouter();
         return array_merge(
             $this->getEnabled() ? [

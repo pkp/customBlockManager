@@ -14,7 +14,7 @@
  *
  */
 
-import('lib.pkp.classes.form.Form');
+use PKP\form\Form;
 
 class CustomBlockForm extends Form
 {
@@ -39,9 +39,9 @@ class CustomBlockForm extends Form
         $this->plugin = $plugin;
 
         // Add form checks
-        $this->addCheck(new FormValidatorPost($this));
-        $this->addCheck(new FormValidatorCSRF($this));
-        $this->addCheck(new FormValidator($this, 'blockTitle', 'required', 'plugins.generic.customBlock.nameRequired'));
+        $this->addCheck(new \PKP\form\validation\FormValidatorPost($this));
+        $this->addCheck(new \PKP\form\validation\FormValidatorCSRF($this));
+        $this->addCheck(new \PKP\form\validation\FormValidator($this, 'blockTitle', 'required', 'plugins.generic.customBlock.nameRequired'));
     }
 
     /**

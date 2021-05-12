@@ -16,6 +16,8 @@
 import('lib.pkp.classes.controllers.grid.GridHandler');
 import('plugins.generic.customBlockManager.controllers.grid.CustomBlockGridRow');
 
+use PKP\linkAction\LinkAction;
+use PKP\linkAction\request\AjaxModal;
 use PKP\core\JSONMessage;
 
 class CustomBlockGridHandler extends GridHandler
@@ -86,7 +88,6 @@ class CustomBlockGridHandler extends GridHandler
 
         // Add grid-level actions
         $router = $request->getRouter();
-        import('lib.pkp.classes.linkAction.request.AjaxModal');
         $this->addAction(
             new LinkAction(
                 'addCustomBlock',
