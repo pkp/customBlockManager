@@ -19,6 +19,7 @@ import('plugins.generic.customBlockManager.controllers.grid.CustomBlockGridRow')
 use PKP\linkAction\LinkAction;
 use PKP\linkAction\request\AjaxModal;
 use PKP\core\JSONMessage;
+use PKP\controllers\grid\GridColumn;
 
 class CustomBlockGridHandler extends GridHandler
 {
