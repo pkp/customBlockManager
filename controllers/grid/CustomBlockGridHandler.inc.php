@@ -13,13 +13,14 @@
  * @brief Handle custom block manager grid requests.
  */
 
-import('lib.pkp.classes.controllers.grid.GridHandler');
-import('plugins.generic.customBlockManager.controllers.grid.CustomBlockGridRow');
-
+use PKP\controllers\grid\GridHandler;
+use PKP\security\Role;
 use PKP\linkAction\LinkAction;
 use PKP\linkAction\request\AjaxModal;
 use PKP\core\JSONMessage;
 use PKP\controllers\grid\GridColumn;
+
+import('plugins.generic.customBlockManager.controllers.grid.CustomBlockGridRow');
 
 class CustomBlockGridHandler extends GridHandler
 {
@@ -33,7 +34,7 @@ class CustomBlockGridHandler extends GridHandler
     {
         parent::__construct();
         $this->addRoleAssignment(
-            [ROLE_ID_MANAGER, ROLE_ID_SITE_ADMIN],
+            [Role::ROLE_ID_MANAGER, Role::ROLE_ID_SITE_ADMIN],
             ['fetchGrid', 'fetchRow', 'addCustomBlock', 'editCustomBlock', 'updateCustomBlock', 'deleteCustomBlock']
         );
         $this->plugin = PluginRegistry::getPlugin('generic', CUSTOMBLOCKMANAGER_PLUGIN_NAME);
