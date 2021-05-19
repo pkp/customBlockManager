@@ -60,7 +60,7 @@ class CustomBlockManagerPlugin extends GenericPlugin
                         $contextId = $mainContextId;
                     } else {
                         $context = $request->getContext();
-                        $contextId = $context ? $context->getId() : CONTEXT_SITE;
+                        $contextId = $context ? $context->getId() : \PKP\core\PKPApplication::CONTEXT_SITE;
                     }
 
                     // Load the custom blocks we have created

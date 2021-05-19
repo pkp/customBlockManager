@@ -15,7 +15,7 @@
 	{rdelim});
 </script>
 
-<form class="pkp_form" id="customBlockForm" method="post" action="{url router=PKPApplication::ROUTE_COMPONENT component="plugins.generic.customBlockManager.controllers.grid.CustomBlockGridHandler" op="updateCustomBlock" existingBlockName=$existingBlockName}">
+<form class="pkp_form" id="customBlockForm" method="post" action="{url router=\PKP\core\PKPApplication::ROUTE_COMPONENT component="plugins.generic.customBlockManager.controllers.grid.CustomBlockGridHandler" op="updateCustomBlock" existingBlockName=$existingBlockName}">
 	{csrf}
 	{fbvFormArea id="customBlocksFormArea" class="border"}
 		{fbvFormSection}
