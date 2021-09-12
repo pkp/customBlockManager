@@ -15,6 +15,7 @@
  */
 
 use PKP\form\Form;
+use PKP\facades\Locale;
 
 class CustomBlockForm extends Form
 {
@@ -86,7 +87,7 @@ class CustomBlockForm extends Form
         $plugin = $this->plugin;
         $contextId = $this->contextId;
         if (!$plugin) {
-            $locale = AppLocale::getLocale();
+            $locale = Locale::getLocale();
 
             // Add the custom block to the list of the custom block plugins in the
             // custom block manager plugin

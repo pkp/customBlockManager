@@ -16,6 +16,8 @@
 
 import('lib.pkp.classes.plugins.BlockPlugin');
 
+use PKP\facades\Locale;
+
 class CustomBlockPlugin extends BlockPlugin
 {
     /** @var string Name of this block plugin */
@@ -123,7 +125,7 @@ class CustomBlockPlugin extends BlockPlugin
         // Get the block contents.
         $customBlockTitle = $this->getSetting($contextId, 'blockTitle');
         $customBlockContent = $this->getSetting($contextId, 'blockContent');
-        $currentLocale = AppLocale::getLocale();
+        $currentLocale = Locale::getLocale();
         $contextPrimaryLocale = $context ? $context->getPrimaryLocale() : $request->getSite()->getPrimaryLocale();
 
         $divCustomBlockId = 'customblock-' . preg_replace('/\W+/', '-', $this->getName());
