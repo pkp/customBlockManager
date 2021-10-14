@@ -14,9 +14,13 @@
  *
  */
 
+use APP\core\Application;
+use APP\template\TemplateManager;
 use PKP\linkAction\LinkAction;
-use PKP\plugins\GenericPlugin;
 use PKP\linkAction\request\AjaxModal;
+use PKP\plugins\GenericPlugin;
+use PKP\plugins\HookRegistry;
+use PKP\plugins\PluginRegistry;
 
 class CustomBlockManagerPlugin extends GenericPlugin
 {
@@ -47,7 +51,7 @@ class CustomBlockManagerPlugin extends GenericPlugin
             // If the system isn't installed, or is performing an upgrade, don't
             // register hooks. This will prevent DB access attempts before the
             // schema is installed.
-            if (!Config::getVar('general', 'installed') || defined('RUNNING_UPGRADE')) {
+            if (!Application::isReady()) {
                 return true;
             }
 

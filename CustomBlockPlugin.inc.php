@@ -16,7 +16,9 @@
 
 import('lib.pkp.classes.plugins.BlockPlugin');
 
+use APP\core\Application;
 use PKP\facades\Locale;
+use PKP\plugins\BlockPlugin;
 
 class CustomBlockPlugin extends BlockPlugin
 {
@@ -90,7 +92,7 @@ class CustomBlockPlugin extends BlockPlugin
      */
     public function getEnabled($contextId = null)
     {
-        if (!Config::getVar('general', 'installed')) {
+        if (!Application::isInstalled()) {
             return true;
         }
         return parent::getEnabled($contextId);
