@@ -16,6 +16,8 @@
 use PKP\controllers\grid\GridColumn;
 use PKP\controllers\grid\GridHandler;
 use PKP\core\JSONMessage;
+use PKP\db\DAO;
+use PKP\db\DAORegistry;
 use PKP\linkAction\LinkAction;
 use PKP\linkAction\request\AjaxModal;
 use PKP\security\Role;
@@ -208,10 +210,9 @@ class CustomBlockGridHandler extends GridHandler
             // Save the results
             $customBlockForm->execute();
             return DAO::getDataChangedEvent();
-        } else {
-            // Present any errors
-            return new JSONMessage(true, $customBlockForm->fetch($request));
         }
+        // Present any errors
+        return new JSONMessage(true, $customBlockForm->fetch($request));
     }
 
     /**
