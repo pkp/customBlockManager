@@ -13,12 +13,12 @@
  * @brief Handle custom block manager grid requests.
  */
 
+use PKP\controllers\grid\GridColumn;
 use PKP\controllers\grid\GridHandler;
-use PKP\security\Role;
+use PKP\core\JSONMessage;
 use PKP\linkAction\LinkAction;
 use PKP\linkAction\request\AjaxModal;
-use PKP\core\JSONMessage;
-use PKP\controllers\grid\GridColumn;
+use PKP\security\Role;
 
 import('plugins.generic.customBlockManager.controllers.grid.CustomBlockGridRow');
 
@@ -131,8 +131,8 @@ class CustomBlockGridHandler extends GridHandler
     /**
      * An action to add a new custom block
      *
-     * @param $args array Arguments to the request
-     * @param $request PKPRequest Request object
+     * @param array $args Arguments to the request
+     * @param PKPRequest $request Request object
      */
     public function addCustomBlock($args, $request)
     {
@@ -144,8 +144,8 @@ class CustomBlockGridHandler extends GridHandler
     /**
      * An action to edit a custom block
      *
-     * @param $args array Arguments to the request
-     * @param $request PKPRequest Request object
+     * @param array $args Arguments to the request
+     * @param PKPRequest $request Request object
      *
      * @return string Serialized JSON object
      */
@@ -176,8 +176,8 @@ class CustomBlockGridHandler extends GridHandler
     /**
      * Update a custom block
      *
-     * @param $args array
-     * @param $request PKPRequest
+     * @param array $args
+     * @param PKPRequest $request
      *
      * @return string Serialized JSON object
      */
@@ -217,8 +217,8 @@ class CustomBlockGridHandler extends GridHandler
     /**
      * Delete a custom block
      *
-     * @param $args array
-     * @param $request PKPRequest
+     * @param array $args
+     * @param PKPRequest $request
      *
      * @return string Serialized JSON object
      */

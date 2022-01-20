@@ -96,7 +96,7 @@ class CustomBlockManagerPlugin extends GenericPlugin
     /**
      * Permit requests to the custom block grid handler
      *
-     * @param $hookName string The name of the hook being invoked
+     * @param string $hookName The name of the hook being invoked
      */
     public function setupGridHandler($hookName, $params)
     {
@@ -152,7 +152,7 @@ class CustomBlockManagerPlugin extends GenericPlugin
             'customBlockGridUrlGridContainer',
             $dispatcher->url(
                 $request,
-                PKPApplication::ROUTE_COMPONENT,
+                Application::ROUTE_COMPONENT,
                 null,
                 'plugins.generic.customBlockManager.controllers.grid.CustomBlockGridHandler',
                 'fetchGrid'
@@ -168,7 +168,7 @@ class CustomBlockManagerPlugin extends GenericPlugin
      *
      * @see PluginGridRow::_canEdit()
      *
-     * @return boolean
+     * @return bool
      */
     public function isSitePlugin()
     {

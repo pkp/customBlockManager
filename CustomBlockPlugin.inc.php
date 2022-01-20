@@ -31,8 +31,8 @@ class CustomBlockPlugin extends BlockPlugin
     /**
      * Constructor
      *
-     * @param $blockName string Name of this block plugin.
-     * @param $parentPlugin CustomBlockManagerPlugin Custom block plugin management plugin.
+     * @param string $blockName Name of this block plugin.
+     * @param CustomBlockManagerPlugin $parentPlugin Custom block plugin management plugin.
      */
     public function __construct($blockName, $parentPlugin)
     {

@@ -14,8 +14,8 @@
  *
  */
 
-use PKP\form\Form;
 use PKP\facades\Locale;
+use PKP\form\Form;
 
 class CustomBlockForm extends Form
 {
@@ -28,9 +28,9 @@ class CustomBlockForm extends Form
     /**
      * Constructor
      *
-     * @param $template string the path to the form template file
-     * @param $contextId int
-     * @param $plugin CustomBlockPlugin
+     * @param string $template the path to the form template file
+     * @param int $contextId
+     * @param CustomBlockPlugin $plugin
      */
     public function __construct($template, $contextId, $plugin = null)
     {
