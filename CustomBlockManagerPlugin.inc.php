@@ -51,7 +51,7 @@ class CustomBlockManagerPlugin extends GenericPlugin
             // If the system isn't installed, or is performing an upgrade, don't
             // register hooks. This will prevent DB access attempts before the
             // schema is installed.
-            if (!Application::isReady()) {
+            if (Application::isUnderMaintenance()) {
                 return true;
             }
 
