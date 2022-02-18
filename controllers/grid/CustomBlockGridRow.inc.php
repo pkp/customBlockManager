@@ -13,8 +13,8 @@
  * @brief Handle custom blocks grid row requests.
  */
 
-use PKP\linkAction\request\AjaxModal;
 use PKP\linkAction\LinkAction;
+use PKP\linkAction\request\AjaxModal;
 use PKP\linkAction\request\RemoteActionConfirmationModal;
 
 // FIXME: add namespacing

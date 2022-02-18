@@ -16,6 +16,10 @@
 
 import('lib.pkp.classes.plugins.BlockPlugin');
 
+use APP\core\Application;
+use PKP\facades\Locale;
+use PKP\plugins\BlockPlugin;
+
 class CustomBlockPlugin extends BlockPlugin
 {
     /** @var string Name of this block plugin */
@@ -27,8 +31,8 @@ class CustomBlockPlugin extends BlockPlugin
     /**
      * Constructor
      *
-     * @param $blockName string Name of this block plugin.
-     * @param $parentPlugin CustomBlockManagerPlugin Custom block plugin management plugin.
+     * @param string $blockName Name of this block plugin.
+     * @param CustomBlockManagerPlugin $parentPlugin Custom block plugin management plugin.
      */
     public function __construct($blockName, $parentPlugin)
     {
@@ -88,7 +92,7 @@ class CustomBlockPlugin extends BlockPlugin
      */
     public function getEnabled($contextId = null)
     {
-        if (!Config::getVar('general', 'installed')) {
+        if (!Application::isInstalled()) {
             return true;
         }
         return parent::getEnabled($contextId);
@@ -123,7 +127,7 @@ class CustomBlockPlugin extends BlockPlugin
         // Get the block contents.
         $customBlockTitle = $this->getSetting($contextId, 'blockTitle');
         $customBlockContent = $this->getSetting($contextId, 'blockContent');
-        $currentLocale = AppLocale::getLocale();
+        $currentLocale = Locale::getLocale();
         $contextPrimaryLocale = $context ? $context->getPrimaryLocale() : $request->getSite()->getPrimaryLocale();
 
         $divCustomBlockId = 'customblock-' . preg_replace('/\W+/', '-', $this->getName());

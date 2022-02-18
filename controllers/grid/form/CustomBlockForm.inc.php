@@ -14,7 +14,11 @@
  *
  */
 
+use APP\template\TemplateManager;
+use PKP\facades\Locale;
 use PKP\form\Form;
+use PKP\plugins\PluginRegistry;
+use Stringy\Stringy;
 
 class CustomBlockForm extends Form
 {
@@ -27,9 +31,9 @@ class CustomBlockForm extends Form
     /**
      * Constructor
      *
-     * @param $template string the path to the form template file
-     * @param $contextId int
-     * @param $plugin CustomBlockPlugin
+     * @param string $template the path to the form template file
+     * @param int $contextId
+     * @param CustomBlockPlugin $plugin
      */
     public function __construct($template, $contextId, $plugin = null)
     {
@@ -86,18 +90,15 @@ class CustomBlockForm extends Form
         $plugin = $this->plugin;
         $contextId = $this->contextId;
         if (!$plugin) {
-            $locale = AppLocale::getLocale();
+            $locale = Locale::getLocale();
 
             // Add the custom block to the list of the custom block plugins in the
             // custom block manager plugin
             $customBlockManagerPlugin = PluginRegistry::getPlugin('generic', CUSTOMBLOCKMANAGER_PLUGIN_NAME);
-            $blocks = $customBlockManagerPlugin->getSetting($contextId, 'blocks');
-            if (!isset($blocks)) {
-                $blocks = [];
-            }
+            $blocks = $customBlockManagerPlugin->getSetting($contextId, 'blocks') ?? [];
 
 
-            $blockName = \Stringy\Stringy::create($this->getData('blockTitle')[$locale])->toLowerCase()->dasherize()->regexReplace('[^a-z0-9\-\_.]', '');
+            $blockName = Stringy::create($this->getData('blockTitle')[$locale])->toLowerCase()->dasherize()->regexReplace('[^a-z0-9\-\_.]', '');
             if (in_array($blockName, $blocks)) {
                 $blockName = uniqid($blockName);
             }
