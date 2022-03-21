@@ -4,7 +4,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-19T11:05:00+00:00\n"
-"PO-Revision-Date: 2022-02-22 11:06+0000\n"
+"PO-Revision-Date: 2022-03-22 09:56+0000\n"
 "Last-Translator: Petro Bilous <petrobilous@ukr.net>\n"
 "Language-Team: Ukrainian <http://translate.pkp.sfu.ca/projects/plugins/"
 "custom-block-manager-plugin/uk_UA/>\n"
@@ -17,16 +17,18 @@ msgstr ""
 "X-Generator: Weblate 3.9.1\n"
 
 msgid "plugins.generic.customBlockManager.displayName"
-msgstr "Менеджер власних блоків"
+msgstr "Менеджер користувацьких блоків"
 
 msgid "plugins.generic.customBlockManager.manage"
-msgstr "Керувати власними блоками"
+msgstr "Керувати користувацькими блоками"
 
 msgid "plugins.generic.customBlockManager.description"
-msgstr "Дозволяє керувати (додавати, змінювати та видаляти) власними блоками на бічній панелі."
+msgstr ""
+"Цей плагін дає змогу керувати (додавати, змінювати та видаляти) "
+"користувацькими блоками на бічній панелі."
 
 msgid "plugins.generic.customBlockManager.customBlocks"
-msgstr "Власні блоки"
+msgstr "Користувацькі блоки"
 
 msgid "plugins.generic.customBlockManager.blockName"
 msgstr "Назва блоку"
@@ -35,25 +37,27 @@ msgid "plugins.generic.customBlockManager.addBlock"
 msgstr "Додати блок"
 
 msgid "plugins.generic.customBlockManager.noneCreated"
-msgstr "Власні блоки не були створені."
+msgstr "Жодного користувацького блоку не було створено."
 
 msgid "plugins.generic.customBlock.content"
-msgstr "Зміст"
+msgstr "Контент"
 
 msgid "plugins.generic.customBlock.nameSuffix"
-msgstr "(власний блок)"
+msgstr "(Користувацький блок)"
 
 msgid "plugins.generic.customBlock.description"
 msgstr "Це створений користувачем блок."
 
 msgid "plugins.generic.customBlock.nameRequired"
-msgstr "Назва власного блоку обов'язкова."
+msgstr "Назва користувацького блоку є обов'язковою."
 
 msgid "plugins.generic.customBlock.nameRegEx"
-msgstr "Назва власного блоку повинна містити лише літери, цифри, дефіс та підкреслювання."
+msgstr ""
+"Назва користувацького блоку повинна містити лише літери, цифри й дефіс / "
+"підкреслення."
 
 msgid "plugins.generic.customBlock.showName.description"
-msgstr "Показати назву цього блоку над змістом блоку."
+msgstr "Показати назву цього блоку над контентом блоку."
 
 msgid "plugins.generic.customBlock.showName"
 msgstr "Показати назву"
