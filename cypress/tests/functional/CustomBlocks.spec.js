@@ -38,8 +38,8 @@ describe('Custom Block Manager plugin tests', function() {
 		// This click should be unnecessary.
 		cy.get('.app__nav a').contains('Website').click();
 		cy.get('#appearance > .pkpTabs > .pkpTabs__buttons > #appearance-setup-button').click();
-		cy.get('#setup span:contains("test-custom-block"):first').click();
-		cy.get('#setup button:contains("Save")').click();
+		cy.get('#appearance-setup span:contains("test-custom-block"):first').click();
+		cy.get('#appearance-setup button:contains("Save")').click();
 		cy.waitJQuery();
 
 		cy.visit('/index.php/publicknowledge');
