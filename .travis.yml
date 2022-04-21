@@ -40,5 +40,6 @@ script:
   - $(npm bin)/cypress run --config integrationFolder=plugins/generic/customBlockManager/cypress/tests
 
 after_failure:
+  - cat error.log
   - sudo apt-get install sharutils
   - tar cz cypress/screenshots | uuencode /dev/stdout
