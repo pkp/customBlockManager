@@ -1,41 +1,29 @@
+```
 =============================================================
 === Custom Block Manager Plugin
-=== Version: 1.2
+=== Version: (see version.xml)
 === Author: Juan Pablo Alperin <pkp@alperin.ca>
 === Co-Author: Bozana Bokan <bozana.bokan@cedis.fu-berlin.de>
 =============================================================
+```
 
-About
------
+## About
+
 This plugin is intended to enable users to create customizable HTML blocks for
 the sidebars.
 
-License
--------
-This plugin is licensed under the GNU General Public License v2. See the file
+## License
+
+This plugin is licensed under the GNU General Public License v3. See the file
 LICENSE for the complete terms of this license.
 
-System Requirements
--------------------
-This plugin is compatible with...
- - OJS 3.0.x
- - OMP 1.2.x
- - OMP 1.1.x
+## System Requirements
 
-Installation
-------------
-To install the plugin:
- - Unpack the plugin tar.gz file to your plugins/generic directory
- - From your application's installation directory, run the upgrade script:
-    $ php tools/upgrade.php upgrade
-   (NOTE: It is recommended to back up your database first.)
- - Enable the plugin by going to:
-   Management > Website Settings > Plugins > Generic Plugins
-   ...and selecting the Enable checkbox beside "Custom Block Manager Plugin"
+This plugin is compatible with OJS, OMP, and OPS. Ensure that you're installing
+a compatible version by using the Plugin Gallery.
 
+## Management
 
-Management
-------------
 The Plugin management interface can be found at:
 Management > Website Settings > Plugins > Generic Plugins > Custom Block Manager
 
@@ -46,8 +34,7 @@ The added custom blocks will per default appear in the right sidebar, but this
 can be changed in:
 Management > Website Settings > Appearance > Layout > Sidebar Management.
 
+## Contact/Support
 
-Contact/Support
----------------
 Documentation, bug listings, and updates can be found on this plugin's homepage
-at <http://github.com/pkp/customBlockManager>.
+at [http://github.com/pkp/customBlockManager](http://github.com/pkp/customBlockManager).
