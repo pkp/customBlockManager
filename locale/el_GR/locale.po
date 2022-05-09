@@ -46,3 +46,9 @@ msgstr "Το όνομα του δομικού στοιχείου είναι απ
 
 msgid "plugins.generic.customBlock.nameRegEx"
 msgstr "Το όνομα του δομικού στοιχείου πρέπει να περιλαμβάνει μόνο γράμματα, αριθμούς και παύλες/κάτω παύλες."
+
+msgid "plugins.generic.customBlock.showName"
+msgstr "Εμφάνιση ονόματος"
+
+msgid "plugins.generic.customBlock.showName.description"
+msgstr "Εμφάνιση του ονόματος αυτού του μπλοκ πάνω από το περιεχόμενο του μπλοκ."
