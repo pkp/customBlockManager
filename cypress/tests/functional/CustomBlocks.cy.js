@@ -29,7 +29,7 @@ describe('Custom Block Manager plugin tests', function() {
 		cy.get('textarea[name="blockContent[en_US]"]').then(node => {
 			cy.setTinyMceContent(node.attr('id'), 'Here is my custom block.');
 		});
-		cy.get('form[id="customBlockForm"] button[id^="submitFormButton-"]').click();
+		cy.get('form[id="customBlockForm"] button[id^="submitFormButton-"]').click({force: true});
 		cy.waitJQuery();
 		cy.wait(500); // Make sure the form has closed
 		cy.get('.pkp_modal_panel > .close').click();
