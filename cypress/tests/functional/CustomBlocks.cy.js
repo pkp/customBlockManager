@@ -1,8 +1,8 @@
 /**
- * @file cypress/tests/functional/CustomBlocks.spec.js
+ * @file cypress/tests/functional/CustomBlocks.cy.js
  *
- * Copyright (c) 2014-2020 Simon Fraser University
- * Copyright (c) 2000-2020 John Willinsky
+ * Copyright (c) 2014-2023 Simon Fraser University
+ * Copyright (c) 2000-2023 John Willinsky
  * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
  *
  */
@@ -29,7 +29,7 @@ describe('Custom Block Manager plugin tests', function() {
 		cy.get('textarea[name="blockContent[en_US]"]').then(node => {
 			cy.setTinyMceContent(node.attr('id'), 'Here is my custom block.');
 		});
-		cy.get('form[id="customBlockForm"] button[id^="submitFormButton-"]').click();
+		cy.get('form[id="customBlockForm"] button[id^="submitFormButton-"]').click({force: true});
 		cy.waitJQuery();
 		cy.wait(500); // Make sure the form has closed
 		cy.get('.pkp_modal_panel > .close').click();
