@@ -1,0 +1,60 @@
+# Artashes Mirzoyan <amirzoyan@sci.am>, 2022.
+# Tigran Zargaryan <tigran@flib.sci.am>, 2022.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2022-07-03 05:31+0000\n"
+"Last-Translator: Tigran Zargaryan <tigran@flib.sci.am>\n"
+"Language-Team: Armenian <http://translate.pkp.sfu.ca/projects/plugins/"
+"custom-block-manager-plugin/hy_AM/>\n"
+"Language: hy_AM\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n > 1;\n"
+"X-Generator: Weblate 3.9.1\n"
+
+msgid "plugins.generic.customBlock.showName.description"
+msgstr "Ցույց տալ այս բլոկի անունը բլոկի բովանդակության վերևում:"
+
+msgid "plugins.generic.customBlock.showName"
+msgstr "Ցույց տվեք անունը"
+
+msgid "plugins.generic.customBlock.nameRegEx"
+msgstr ""
+"Անհատականացված բլոկի անունը պետք է պարունակի միայն տառեր, թվեր և "
+"գծիկներ/ընդգծումներ:"
+
+msgid "plugins.generic.customBlock.nameRequired"
+msgstr "Պահանջվում է անհատականացված բլոկի անունը:"
+
+msgid "plugins.generic.customBlock.description"
+msgstr "Սա օգտվողի կողմից ստեղծված բլոկ է:"
+
+msgid "plugins.generic.customBlock.nameSuffix"
+msgstr "(Անհատականացված բլոկ)"
+
+msgid "plugins.generic.customBlock.content"
+msgstr "Բովանդակություն"
+
+msgid "plugins.generic.customBlockManager.noneCreated"
+msgstr "Չեն ստեղծվել անհատականացված բլոկներ:"
+
+msgid "plugins.generic.customBlockManager.addBlock"
+msgstr "Ավելացրեք բլոկ"
+
+msgid "plugins.generic.customBlockManager.blockName"
+msgstr "Բլոկի անունը"
+
+msgid "plugins.generic.customBlockManager.customBlocks"
+msgstr "Անհատականացված բլոկներ"
+
+msgid "plugins.generic.customBlockManager.description"
+msgstr ""
+"Այս փլագինը թույլ է տալիս կառավարել (ավելացնել, խմբագրել և ջնջել) կողագոտու "
+"անհատականացված բլոկները:"
+
+msgid "plugins.generic.customBlockManager.manage"
+msgstr "Կառավարեք անհատականացված բլոկները"
+
+msgid "plugins.generic.customBlockManager.displayName"
+msgstr "Անհատականացված բլոկի կառավարիչ"
