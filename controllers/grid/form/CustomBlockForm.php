@@ -8,6 +8,7 @@
  * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
  *
  * @class CustomBlockForm
+ *
  * @ingroup controllers_grid_customBlockManager
  *
  * Form for press managers to create and modify sidebar blocks

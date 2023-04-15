@@ -8,6 +8,7 @@
  * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
  *
  * @class CustomBlockGridHandler
+ *
  * @ingroup controllers_grid_customBlockManager
  *
  * @brief Handle custom block manager grid requests.

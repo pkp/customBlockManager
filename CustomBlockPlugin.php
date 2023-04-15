@@ -8,6 +8,7 @@
  * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
  *
  * @package plugins.generic.customBlockManager
+ *
  * @class CustomBlockPlugin
  *
  * A generic sidebar block that can be customized through the CustomBlockManagerPlugin

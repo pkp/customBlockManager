@@ -8,6 +8,7 @@
  * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
  *
  * @package plugins.generic.customBlockManager
+ *
  * @class CustomBlockManagerPlugin
  *
  * Plugin to let managers add and delete custom sidebar blocks

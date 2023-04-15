@@ -8,6 +8,7 @@
  * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
  *
  * @class CustomBlockGridRow
+ *
  * @ingroup controllers_grid_customBlockManager
  *
  * @brief Handle custom blocks grid row requests.
