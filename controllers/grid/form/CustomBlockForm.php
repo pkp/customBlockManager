@@ -1,7 +1,7 @@
 <?php
 
 /**
- * @file plugins/generic/customBlockManager/controllers/grid/form/CustomBlockForm.inc.php
+ * @file plugins/generic/customBlockManager/controllers/grid/form/CustomBlockForm.php
  *
  * Copyright (c) 2014-2020 Simon Fraser University
  * Copyright (c) 2003-2020 John Willinsky
@@ -14,6 +14,9 @@
  *
  */
 
+namespace APP\plugins\generic\customBlockManager\controllers\grid\form;
+
+use APP\plugins\generic\customBlockManager\CustomBlockPlugin;
 use APP\template\TemplateManager;
 use PKP\facades\Locale;
 use PKP\form\Form;
@@ -106,7 +109,6 @@ class CustomBlockForm extends Form
             $customBlockManagerPlugin->updateSetting($contextId, 'blocks', $blocks);
 
             // Create a new custom block plugin
-            import('plugins.generic.customBlockManager.CustomBlockPlugin');
             $plugin = new CustomBlockPlugin($blockName, $customBlockManagerPlugin);
             // Default the block to being enabled
             $plugin->setEnabled(true);
@@ -119,4 +121,8 @@ class CustomBlockForm extends Form
 
         parent::execute(...$functionArgs);
     }
+}
+
+if (!PKP_STRICT_MODE) {
+    class_alias('\APP\plugins\generic\customBlockManager\controllers\grid\form\CustomBlockForm', '\CustomBlockForm');
 }

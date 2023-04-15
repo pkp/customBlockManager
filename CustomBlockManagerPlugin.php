@@ -1,7 +1,7 @@
 <?php
 
 /**
- * @file plugins/generic/customBlockManager/CustomBlockManagerPlugin.inc.php
+ * @file plugins/generic/customBlockManager/CustomBlockManagerPlugin.php
  *
  * Copyright (c) 2014-2020 Simon Fraser University
  * Copyright (c) 2003-2020 John Willinsky
@@ -13,6 +13,8 @@
  * Plugin to let managers add and delete custom sidebar blocks
  *
  */
+
+namespace APP\plugins\generic\customBlockManager;
 
 use APP\core\Application;
 use APP\template\TemplateManager;
@@ -56,8 +58,6 @@ class CustomBlockManagerPlugin extends GenericPlugin
             }
 
             if ($this->getEnabled($mainContextId)) {
-                $this->import('CustomBlockPlugin');
-
                 // Ensure that there is a context (journal or press)
                 if ($request = Application::get()->getRequest()) {
                     if ($mainContextId) {
@@ -174,4 +174,8 @@ class CustomBlockManagerPlugin extends GenericPlugin
     {
         return !Application::get()->getRequest()->getContext();
     }
+}
+
+if (!PKP_STRICT_MODE) {
+    class_alias('\APP\plugins\generic\customBlockManager\CustomBlockManagerPlugin', '\CustomBlockManagerPlugin');
 }

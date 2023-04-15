@@ -1,7 +1,7 @@
 <?php
 
 /**
- * @file plugins/generic/customBlockManager/controllers/grid/CustomBlockGridHandler.inc.php
+ * @file plugins/generic/customBlockManager/controllers/grid/CustomBlockGridHandler.php
  *
  * Copyright (c) 2014-2020 Simon Fraser University
  * Copyright (c) 2003-2020 John Willinsky
@@ -13,6 +13,10 @@
  * @brief Handle custom block manager grid requests.
  */
 
+namespace APP\plugins\generic\customBlockManager\controllers\grid;
+
+use APP\plugins\generic\customBlockManager\controllers\grid\form\CustomBlockForm;
+use APP\plugins\generic\customBlockManager\CustomBlockPlugin;
 use PKP\controllers\grid\GridColumn;
 use PKP\controllers\grid\GridHandler;
 use PKP\core\JSONMessage;
@@ -20,9 +24,11 @@ use PKP\db\DAO;
 use PKP\db\DAORegistry;
 use PKP\linkAction\LinkAction;
 use PKP\linkAction\request\AjaxModal;
+use PKP\plugins\PluginRegistry;
+use PKP\plugins\PluginSettingsDAO;
+use PKP\security\authorization\ContextAccessPolicy;
+use PKP\security\authorization\PKPSiteAccessPolicy;
 use PKP\security\Role;
-
-import('plugins.generic.customBlockManager.controllers.grid.CustomBlockGridRow');
 
 class CustomBlockGridHandler extends GridHandler
 {
@@ -52,10 +58,8 @@ class CustomBlockGridHandler extends GridHandler
     public function authorize($request, &$args, $roleAssignments)
     {
         if ($request->getContext()) {
-            import('lib.pkp.classes.security.authorization.ContextAccessPolicy');
             $this->addPolicy(new ContextAccessPolicy($request, $roleAssignments));
         } else {
-            import('lib.pkp.classes.security.authorization.PKPSiteAccessPolicy');
             $this->addPolicy(new PKPSiteAccessPolicy($request, null, $roleAssignments));
         }
         return parent::authorize($request, $args, $roleAssignments);
@@ -162,12 +166,10 @@ class CustomBlockGridHandler extends GridHandler
         // If this is the edit of the existing custom block plugin,
         if ($blockName) {
             // Create the custom block plugin
-            import('plugins.generic.customBlockManager.CustomBlockPlugin');
             $customBlockPlugin = new CustomBlockPlugin($blockName, CUSTOMBLOCKMANAGER_PLUGIN_NAME);
         }
 
         // Create and present the edit form
-        import('plugins.generic.customBlockManager.controllers.grid.form.CustomBlockForm');
         $customBlockManagerPlugin = $this->plugin;
         $template = $customBlockManagerPlugin->getTemplateResource('editCustomBlockForm.tpl');
         $customBlockForm = new CustomBlockForm($template, $contextId, $customBlockPlugin);
@@ -194,12 +196,10 @@ class CustomBlockGridHandler extends GridHandler
         // If this was the edit of the existing custom block plugin
         if ($pluginName) {
             // Create the custom block plugin
-            import('plugins.generic.customBlockManager.CustomBlockPlugin');
             $customBlockPlugin = new CustomBlockPlugin($pluginName, CUSTOMBLOCKMANAGER_PLUGIN_NAME);
         }
 
         // Create and populate the form
-        import('plugins.generic.customBlockManager.controllers.grid.form.CustomBlockForm');
         $customBlockManagerPlugin = $this->plugin;
         $template = $customBlockManagerPlugin->getTemplateResource('editCustomBlockForm.tpl');
         $customBlockForm = new CustomBlockForm($template, $contextId, $customBlockPlugin);
@@ -230,6 +230,7 @@ class CustomBlockGridHandler extends GridHandler
         $contextId = $context ? $context->getId() : 0;
 
         // Delete all the entries for this block plugin
+        /** @var PluginSettingsDAO */
         $pluginSettingsDao = DAORegistry::getDAO('PluginSettingsDAO');
         $pluginSettingsDao->deleteSetting($contextId, $blockName, 'enabled');
         $pluginSettingsDao->deleteSetting($contextId, $blockName, 'context');
@@ -244,4 +245,8 @@ class CustomBlockGridHandler extends GridHandler
         $customBlockManagerPlugin->updateSetting($contextId, 'blocks', $newBlocks);
         return DAO::getDataChangedEvent();
     }
+}
+
+if (!PKP_STRICT_MODE) {
+    class_alias('\APP\plugins\generic\customBlockManager\controllers\grid\CustomBlockGridHandler', '\CustomBlockGridHandler');
 }

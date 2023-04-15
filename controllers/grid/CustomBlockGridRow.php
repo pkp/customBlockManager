@@ -1,7 +1,7 @@
 <?php
 
 /**
- * @file plugins/generic/customBlockManager/controllers/grid/CustomBlockGridRow.inc.php
+ * @file plugins/generic/customBlockManager/controllers/grid/CustomBlockGridRow.php
  *
  * Copyright (c) 2014-2020 Simon Fraser University
  * Copyright (c) 2003-2020 John Willinsky
@@ -13,12 +13,12 @@
  * @brief Handle custom blocks grid row requests.
  */
 
+namespace APP\plugins\generic\customBlockManager\controllers\grid;
+
+use PKP\controllers\grid\GridRow;
 use PKP\linkAction\LinkAction;
 use PKP\linkAction\request\AjaxModal;
 use PKP\linkAction\request\RemoteActionConfirmationModal;
-
-// FIXME: add namespacing
-import('lib.pkp.classes.controllers.grid.GridRow');
 
 class CustomBlockGridRow extends GridRow
 {
@@ -70,4 +70,8 @@ class CustomBlockGridRow extends GridRow
             );
         }
     }
+}
+
+if (!PKP_STRICT_MODE) {
+    class_alias('\APP\plugins\generic\customBlockManager\controllers\grid\CustomBlockGridRow', '\CustomBlockGridRow');
 }
