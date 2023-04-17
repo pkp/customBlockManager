@@ -1,20 +1,21 @@
 <?php
 
 /**
- * @file plugins/generic/customBlockManager/CustomBlockPlugin.inc.php
+ * @file plugins/generic/customBlockManager/CustomBlockPlugin.php
  *
  * Copyright (c) 2014-2020 Simon Fraser University
  * Copyright (c) 2003-2020 John Willinsky
  * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
  *
  * @package plugins.generic.customBlockManager
+ *
  * @class CustomBlockPlugin
  *
  * A generic sidebar block that can be customized through the CustomBlockManagerPlugin
  *
  */
 
-import('lib.pkp.classes.plugins.BlockPlugin');
+namespace APP\plugins\generic\customBlockManager;
 
 use APP\core\Application;
 use PKP\facades\Locale;
@@ -141,4 +142,8 @@ class CustomBlockPlugin extends BlockPlugin
         $templateMgr->assign('showName', $this->getSetting($contextId, 'showName'));
         return parent::getContents($templateMgr, $request);
     }
+}
+
+if (!PKP_STRICT_MODE) {
+    class_alias('\APP\plugins\generic\customBlockManager\CustomBlockPlugin', '\CustomBlockPlugin');
 }
