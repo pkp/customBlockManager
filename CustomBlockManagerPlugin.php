@@ -19,6 +19,7 @@ namespace APP\plugins\generic\customBlockManager;
 
 use APP\core\Application;
 use APP\template\TemplateManager;
+use PKP\core\JSONMessage;
 use PKP\linkAction\LinkAction;
 use PKP\linkAction\request\AjaxModal;
 use PKP\plugins\GenericPlugin;
@@ -145,7 +146,7 @@ class CustomBlockManagerPlugin extends GenericPlugin
     /**
      * @copydoc Plugin::manage()
      */
-    public function manage($args, $request)
+    public function manage($args, $request): JSONMessage
     {
         $templateMgr = TemplateManager::getManager($request);
         $dispatcher = $request->getDispatcher();
@@ -171,7 +172,7 @@ class CustomBlockManagerPlugin extends GenericPlugin
      *
      * @return bool
      */
-    public function isSitePlugin()
+    public function isSitePlugin(): bool
     {
         return !Application::get()->getRequest()->getContext();
     }

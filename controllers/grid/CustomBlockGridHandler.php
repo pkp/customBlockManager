@@ -17,10 +17,12 @@
 namespace APP\plugins\generic\customBlockManager\controllers\grid;
 
 use APP\plugins\generic\customBlockManager\controllers\grid\form\CustomBlockForm;
+use APP\plugins\generic\customBlockManager\CustomBlockManagerPlugin;
 use APP\plugins\generic\customBlockManager\CustomBlockPlugin;
 use PKP\controllers\grid\GridColumn;
 use PKP\controllers\grid\GridHandler;
 use PKP\core\JSONMessage;
+use PKP\core\PKPRequest;
 use PKP\db\DAO;
 use PKP\db\DAORegistry;
 use PKP\linkAction\LinkAction;
@@ -154,7 +156,7 @@ class CustomBlockGridHandler extends GridHandler
      * @param array $args Arguments to the request
      * @param PKPRequest $request Request object
      *
-     * @return string Serialized JSON object
+     * @return JSONMessage Serialized JSON object
      */
     public function editCustomBlock($args, $request)
     {
@@ -184,7 +186,7 @@ class CustomBlockGridHandler extends GridHandler
      * @param array $args
      * @param PKPRequest $request
      *
-     * @return string Serialized JSON object
+     * @return JSONMessage Serialized JSON object
      */
     public function updateCustomBlock($args, $request)
     {
@@ -222,7 +224,7 @@ class CustomBlockGridHandler extends GridHandler
      * @param array $args
      * @param PKPRequest $request
      *
-     * @return string Serialized JSON object
+     * @return JSONMessage Serialized JSON object
      */
     public function deleteCustomBlock($args, $request)
     {
