@@ -66,7 +66,7 @@ class CustomBlockManagerPlugin extends GenericPlugin
                         $contextId = $mainContextId;
                     } else {
                         $context = $request->getContext();
-                        $contextId = $context ? $context->getId() : \PKP\core\PKPApplication::CONTEXT_SITE;
+                        $contextId = $context?->getId() ?? \PKP\core\PKPApplication::CONTEXT_SITE;
                     }
 
                     // Load the custom blocks we have created
@@ -113,34 +113,22 @@ class CustomBlockManagerPlugin extends GenericPlugin
     /**
      * @copydoc Plugin::getActions()
      */
-    public function getActions($request, $actionArgs)
+    public function getActions($request, $actionArgs): array
     {
+        $actions = parent::getActions($request, $actionArgs);
+        if (!$this->getEnabled()) {
+            return $actions;
+        }
         $router = $request->getRouter();
-        return array_merge(
-            $this->getEnabled() ? [
-                new LinkAction(
-                    'settings',
-                    new AjaxModal(
-                        $router->url(
-                            $request,
-                            null,
-                            null,
-                            'manage',
-                            null,
-                            [
-                                'plugin' => $this->getName(),
-                                'category' => $this->getCategory(),
-                                'action' => 'index'
-                            ]
-                        ),
-                        $this->getDisplayName()
-                    ),
-                    __('plugins.generic.customBlockManager.manage'),
-                    null
-                )
-            ] : [],
-            parent::getActions($request, $actionArgs)
+        $ajaxModal = new AjaxModal(
+            $router->url(request: $request, op: 'manage', params: [
+                'plugin' => $this->getName(),
+                'category' => $this->getCategory(),
+                'action' => 'index'
+            ]),
+            $this->getDisplayName()
         );
+        return array_merge([new LinkAction('settings', $ajaxModal, __('plugins.generic.customBlockManager.manage'))], $actions);
     }
 
     /**
