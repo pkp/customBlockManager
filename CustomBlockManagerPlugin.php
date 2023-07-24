@@ -88,7 +88,7 @@ class CustomBlockManagerPlugin extends GenericPlugin
 
                 // This hook is used to register the components this plugin implements to
                 // permit administration of custom block plugins.
-                Hook::add('LoadComponentHandler', [$this, 'setupGridHandler']);
+                Hook::add('LoadComponentHandler', $this->setupGridHandler(...));
             }
             return true;
         }
