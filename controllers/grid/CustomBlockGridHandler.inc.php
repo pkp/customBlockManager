@@ -199,6 +199,8 @@ class CustomBlockGridHandler extends GridHandler {
 	 * @return string Serialized JSON object
 	 */
 	function deleteCustomBlock($args, $request) {
+		if (!$request->checkCSRF()) return new JSONMessage(false);
+
 		$blockName = $request->getUserVar('blockName');
 		$context = $request->getContext();
 		$contextId = $context ? $context->getId() : 0;
