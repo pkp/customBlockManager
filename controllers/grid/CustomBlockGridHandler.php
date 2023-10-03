@@ -228,6 +228,8 @@ class CustomBlockGridHandler extends GridHandler
      */
     public function deleteCustomBlock($args, $request)
     {
+        if (!$request->checkCSRF()) return new JSONMessage(false);
+
         $blockName = $request->getUserVar('blockName');
         $context = $request->getContext();
         $contextId = $context ? $context->getId() : 0;
