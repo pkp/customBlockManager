@@ -22,7 +22,7 @@ use APP\template\TemplateManager;
 use PKP\facades\Locale;
 use PKP\form\Form;
 use PKP\plugins\PluginRegistry;
-use Stringy\Stringy;
+use Illuminate\Support\Str;
 
 class CustomBlockForm extends Form
 {
@@ -102,8 +102,7 @@ class CustomBlockForm extends Form
             $customBlockManagerPlugin = PluginRegistry::getPlugin('generic', CUSTOMBLOCKMANAGER_PLUGIN_NAME);
             $blocks = $customBlockManagerPlugin->getSetting($contextId, 'blocks') ?? [];
 
-
-            $blockName = Stringy::create($this->getData('blockTitle')[$locale])->toLowerCase()->dasherize()->regexReplace('[^a-z0-9\-\_.]', '');
+            $blockName = preg_replace('[^a-z0-9\-\_.]', '', Str::of($this->getData('blockTitle')[$locale])->lower()->kebab());
             if (in_array($blockName, $blocks)) {
                 $blockName = uniqid($blockName);
             }
