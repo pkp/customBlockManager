@@ -21,10 +21,10 @@ php:
   - 8.2.0
 
 env:
-  - APPLICATION=ojs BRANCH=main TEST=mysql
-  - APPLICATION=ojs BRANCH=main TEST=pgsql
-  - APPLICATION=omp BRANCH=main TEST=mysql
-  - APPLICATION=omp BRANCH=main TEST=pgsql
+  - APPLICATION=ojs BRANCH=stable-3_4_0 TEST=mysql
+  - APPLICATION=ojs BRANCH=stable-3_4_0 TEST=pgsql
+  - APPLICATION=omp BRANCH=stable-3_4_0 TEST=mysql
+  - APPLICATION=omp BRANCH=stable-3_4_0 TEST=pgsql
 
 install:
   # Prepare OJS/OMP environment
