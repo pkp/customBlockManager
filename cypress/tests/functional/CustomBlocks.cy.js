@@ -32,7 +32,7 @@ describe('Custom Block Manager plugin tests', function() {
 		cy.get('form[id="customBlockForm"] button[id^="submitFormButton-"]').click({force: true});
 		cy.waitJQuery();
 		cy.wait(500); // Make sure the form has closed
-		cy.get('.pkp_modal_panel > .close').click();
+		cy.get('[role="dialog"] button:contains(\'Close\')').click();
 
 		// FIXME: The settings area has to be reloaded before the new block will appear.a
 		// This click should be unnecessary.
