@@ -16,6 +16,7 @@
 
 namespace APP\plugins\generic\customBlockManager\controllers\grid;
 
+use APP\core\Application;
 use APP\plugins\generic\customBlockManager\controllers\grid\form\CustomBlockForm;
 use APP\plugins\generic\customBlockManager\CustomBlockManagerPlugin;
 use APP\plugins\generic\customBlockManager\CustomBlockPlugin;
@@ -77,7 +78,7 @@ class CustomBlockGridHandler extends GridHandler
     {
         parent::initialize($request, $args);
         $context = $request->getContext();
-        $contextId = $context ? $context->getId() : 0;
+        $contextId = $context ? $context->getId() : Application::SITE_CONTEXT_ID;
 
         // Set the grid title.
         $this->setTitle('plugins.generic.customBlockManager.customBlocks');
@@ -162,7 +163,7 @@ class CustomBlockGridHandler extends GridHandler
     {
         $blockName = $request->getUserVar('blockName');
         $context = $request->getContext();
-        $contextId = $context ? $context->getId() : 0;
+        $contextId = $context ? $context->getId() : Application::SITE_CONTEXT_ID;
         $this->setupTemplate($request);
 
         $customBlockPlugin = null;
@@ -192,7 +193,7 @@ class CustomBlockGridHandler extends GridHandler
     {
         $pluginName = $request->getUserVar('existingBlockName');
         $context = $request->getContext();
-        $contextId = $context ? $context->getId() : 0;
+        $contextId = $context ? $context->getId() : Application::SITE_CONTEXT_ID;
         $this->setupTemplate($request);
 
         $customBlockPlugin = null;
@@ -232,7 +233,7 @@ class CustomBlockGridHandler extends GridHandler
 
         $blockName = $request->getUserVar('blockName');
         $context = $request->getContext();
-        $contextId = $context ? $context->getId() : 0;
+        $contextId = $context ? $context->getId() : Application::SITE_CONTEXT_ID;
 
         // Delete all the entries for this block plugin
         /** @var PluginSettingsDAO */
