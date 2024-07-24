@@ -123,7 +123,7 @@ class CustomBlockPlugin extends BlockPlugin
     public function getContents($templateMgr, $request = null)
     {
         $context = $request->getContext();
-        $contextId = $context ? $context->getId() : 0;
+        $contextId = $context ? $context->getId() : Application::SITE_CONTEXT_ID;
 
         // Get the block contents.
         $customBlockTitle = $this->getSetting($contextId, 'blockTitle');

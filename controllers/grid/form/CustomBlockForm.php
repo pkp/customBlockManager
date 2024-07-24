@@ -26,7 +26,7 @@ use Illuminate\Support\Str;
 
 class CustomBlockForm extends Form
 {
-    /** @var int Context (press / journal) ID */
+    /** @var ?int Context (press / journal) ID */
     public $contextId;
 
     /** @var CustomBlockPlugin Custom block plugin */
@@ -36,7 +36,7 @@ class CustomBlockForm extends Form
      * Constructor
      *
      * @param string $template the path to the form template file
-     * @param int $contextId
+     * @param ?int $contextId
      * @param CustomBlockPlugin $plugin
      */
     public function __construct($template, $contextId, $plugin = null)
