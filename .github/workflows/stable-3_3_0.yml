@@ -1,0 +1,41 @@
+on: [push, pull_request]
+name: customBlockManager
+jobs:
+  customBlockManager:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - application: ojs
+            php-version: 7.4
+            database: mysql
+          - application: ojs
+            php-version: 8.0
+            database: mysql
+          - application: ojs
+            php-version: 7.4
+            database: pgsql
+          - application: ojs
+            php-version: 8.0
+            database: pgsql
+
+    name: customBlockManager
+    steps:
+      - uses: pkp/pkp-github-actions@v1
+        with:
+          node_version: 12
+          branch: stable-3_3_0
+          repository: pkp
+          plugin: true
+
+
+
+
+
+
+
+
+
+
+
