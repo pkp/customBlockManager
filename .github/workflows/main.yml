@@ -23,7 +23,7 @@ jobs:
 
     name: customBlockManager
     steps:
-      - uses: xmlFlow/pkp-github-actions@v1
+      - uses: pkp/pkp-github-actions@v1
         with:
          node_version: 20
          branch: main
