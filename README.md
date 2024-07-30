@@ -12,7 +12,10 @@
 This plugin is intended to enable users to create customizable HTML blocks for
 the sidebars.
 
-[![Build Status](https://travis-ci.org/pkp/customBlockManager.svg?branch=main)](https://travis-ci.org/pkp/customBlockManager)
+| main        |3.4.0   |  3.3.0    |
+|--------- |  --- | ---- |
+| [![customBlockManager](https://github.com/pkp/customBlockManager/actions/workflows/main.yml/badge.svg)](https://github.com/pkp/customBlockManager/actions/workflows/main.yml) | [![customBlockManager](https://github.com/pkp/customBlockManager/actions/workflows/stable-3_4_0.yml/badge.svg)](https://github.com/pkp/customBlockManager/actions/workflows/stable-3_4_0.yml) | [![customBlockManager](https://github.com/pkp/customBlockManager/actions/workflows/stable-3_3_0.yml/badge.svg)](https://github.com/pkp/customBlockManager/actions/workflows/stable-3_3_0.yml) |
+
 
 ## License
 
