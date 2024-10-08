@@ -46,7 +46,7 @@ class CustomBlockGridRow extends GridRow
                     new AjaxModal(
                         $router->url($request, null, null, 'editCustomBlock', null, ['blockName' => $blockName]),
                         __('grid.action.edit'),
-                        'modal_edit',
+                        'side-modal',
                         true
                     ),
                     __('grid.action.edit'),
@@ -63,7 +63,7 @@ class CustomBlockGridRow extends GridRow
                         __('common.confirmDelete'),
                         __('grid.action.delete'),
                         $router->url($request, null, null, 'deleteCustomBlock', null, ['blockName' => $blockName]),
-                        'modal_delete'
+                        'negative'
                     ),
                     __('grid.action.delete'),
                     'delete'

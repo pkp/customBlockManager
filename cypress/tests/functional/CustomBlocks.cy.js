@@ -36,12 +36,11 @@ describe('Custom Block Manager plugin tests', function() {
 		cy.wait(500); // Make sure the form has closed
 		cy.get('[role="dialog"] button:contains(\'Close\')').click();
 
-		// FIXME: The settings area has to be reloaded before the new block will appear.a
-		// This click should be unnecessary.
-		cy.get('nav').contains('Settings').click();
-		// Ensure submenu item click despite animation
-		cy.get('nav').contains('Website').click({ force: true });
-		cy.get('#appearance > .pkpTabs > .pkpTabs__buttons > #appearance-setup-button').click();
+		cy.reload();
+		cy.waitJQuery();
+
+		cy.get('button[id="appearance-button"]').click();
+		cy.get('#appearance-setup-button').click();
 		cy.get('#appearance-setup span:contains("test-custom-block"):first').click();
 		cy.get('#appearance-setup button:contains("Save")').click();
 		cy.waitJQuery();
