@@ -106,7 +106,7 @@ class CustomBlockGridHandler extends GridHandler
                 new AjaxModal(
                     $router->url($request, null, null, 'addCustomBlock'),
                     __('plugins.generic.customBlockManager.addBlock'),
-                    'modal_add_item'
+                    'side-modal'
                 ),
                 __('plugins.generic.customBlockManager.addBlock'),
                 'add_item'
