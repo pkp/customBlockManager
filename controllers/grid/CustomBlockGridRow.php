@@ -46,7 +46,7 @@ class CustomBlockGridRow extends GridRow
                     new AjaxModal(
                         $router->url($request, null, null, 'editCustomBlock', null, ['blockName' => $blockName]),
                         __('grid.action.edit'),
-                        'side-modal',
+                        null,
                         true
                     ),
                     __('grid.action.edit'),
