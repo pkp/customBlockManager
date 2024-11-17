@@ -126,7 +126,7 @@ class CustomBlockManagerPlugin extends GenericPlugin
                 'category' => $this->getCategory(),
                 'action' => 'index'
             ]),
-            $this->getDisplayName()
+            $this->getDisplayName(),
         );
         return array_merge([new LinkAction('settings', $ajaxModal, __('plugins.generic.customBlockManager.manage'))], $actions);
     }
