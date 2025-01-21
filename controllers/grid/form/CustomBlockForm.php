@@ -19,10 +19,10 @@ namespace APP\plugins\generic\customBlockManager\controllers\grid\form;
 
 use APP\plugins\generic\customBlockManager\CustomBlockPlugin;
 use APP\template\TemplateManager;
+use Illuminate\Support\Str;
 use PKP\facades\Locale;
 use PKP\form\Form;
 use PKP\plugins\PluginRegistry;
-use Illuminate\Support\Str;
 
 class CustomBlockForm extends Form
 {

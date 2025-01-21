@@ -158,7 +158,6 @@ class CustomBlockManagerPlugin extends GenericPlugin
      *
      * @see PluginGridRow::_canEdit()
      *
-     * @return bool
      */
     public function isSitePlugin(): bool
     {
