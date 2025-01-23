@@ -23,6 +23,7 @@ use Illuminate\Support\Str;
 use PKP\facades\Locale;
 use PKP\form\Form;
 use PKP\plugins\PluginRegistry;
+use PKP\core\PKPApplication;
 
 class CustomBlockForm extends Form
 {
@@ -60,7 +61,8 @@ class CustomBlockForm extends Form
         $contextId = $this->contextId;
         $plugin = $this->plugin;
 
-        $templateMgr = TemplateManager::getManager();
+	$request = PKPApplication::get()->getRequest();
+        $templateMgr = TemplateManager::getManager($request);
 
         $existingBlockName = null;
         $blockTitle = null;
