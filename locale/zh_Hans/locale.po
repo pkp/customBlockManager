@@ -1,21 +1,25 @@
+# wenshao521！ <wainixueer3334@gmail.com>, 2025.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"Last-Translator: \n"
-"Language-Team: \n"
+"POT-Creation-Date: 2019-11-19T11:05:00+00:00\n"
+"PO-Revision-Date: 2025-05-14 08:51+0000\n"
+"Last-Translator: wenshao521！ <wainixueer3334@gmail.com>\n"
+"Language-Team: Chinese (Simplified) <http://translate.pkp.sfu.ca/projects/"
+"plugins/custom-block-manager-plugin/zh_Hans/>\n"
+"Language: zh_Hans\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2019-11-19T11:05:00+00:00\n"
-"PO-Revision-Date: 2019-11-19T11:05:00+00:00\n"
-"Language: \n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Weblate 4.18.2\n"
 
 msgid "plugins.generic.customBlockManager.displayName"
 msgstr "自定义区块管理(Custom Block Manager)"
 
 msgid "plugins.generic.customBlockManager.description"
-msgstr "本插件允许在边栏增加区块，和对边栏区块的重新排序。(This plugin lets you create addition sidebar blocks.  Once they are created, you can edit their content and rearrange them within the sidebars.)"
+msgstr "本插件允许在边栏增加区块，和对边栏区块的重新排序。"
 
 msgid "plugins.generic.customBlockManager.blockName"
 msgstr "区块名称(Block Name)"
@@ -30,4 +34,25 @@ msgid "plugins.generic.customBlock.nameSuffix"
 msgstr "(自定义块插件)(Custom Block Plugin)"
 
 msgid "plugins.generic.customBlock.description"
-msgstr "这是一个用户生成的区块。(This is a user-generated block.)"
+msgstr "这是一个用户生成的区块。"
+
+msgid "plugins.generic.customBlockManager.manage"
+msgstr "管理自定义块"
+
+msgid "plugins.generic.customBlockManager.customBlocks"
+msgstr "自定义块"
+
+msgid "plugins.generic.customBlockManager.noneCreated"
+msgstr "尚未创建自定义块。"
+
+msgid "plugins.generic.customBlock.nameRequired"
+msgstr "需要自定义块名称。"
+
+msgid "plugins.generic.customBlock.nameRegEx"
+msgstr "自定义块名称必须仅包含字母、数字和连字符/下划线。"
+
+msgid "plugins.generic.customBlock.showName"
+msgstr "展示名称"
+
+msgid "plugins.generic.customBlock.showName.description"
+msgstr "在区块内容上方显示该区块名称。"
