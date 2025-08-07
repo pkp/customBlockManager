@@ -72,7 +72,3 @@ class CustomBlockGridRow extends GridRow
         }
     }
 }
-
-if (!PKP_STRICT_MODE) {
-    class_alias('\APP\plugins\generic\customBlockManager\controllers\grid\CustomBlockGridRow', '\CustomBlockGridRow');
-}
