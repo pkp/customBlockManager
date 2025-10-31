@@ -1,3 +1,60 @@
 # Informatikaria <informatikaria@ueu.eus>, 2024.
+# Oihan Odriozola <oodriozola@euskaltzaindia.eus>, 2025.
 msgid ""
-msgstr "X-Generator: Weblate\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit"
+msgstr ""
+"PO-Revision-Date: 2025-08-04 06:08+0000\n"
+"Last-Translator: Oihan Odriozola <oodriozola@euskaltzaindia.eus>\n"
+"Language-Team: Basque <http://translate.pkp.sfu.ca/projects/plugins/"
+"custom-block-manager-plugin/eu/>\n"
+"Language: eu\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 4.18.2\n"
+
+msgid "plugins.generic.customBlockManager.manage"
+msgstr "Kudeatu bloke pertsonalizatuak"
+
+msgid "plugins.generic.customBlockManager.displayName"
+msgstr "Custom Block Manager"
+
+msgid "plugins.generic.customBlockManager.description"
+msgstr ""
+"Plugin honek alboko barrako bloke pertsonalizatuak kudeatzeko (gehitzeko, "
+"editatzeko eta ezabatzeko) aukera ematen dizu."
+
+msgid "plugins.generic.customBlockManager.customBlocks"
+msgstr "Bloke pertsonalizatuak"
+
+msgid "plugins.generic.customBlockManager.blockName"
+msgstr "Blokearen izena"
+
+msgid "plugins.generic.customBlockManager.addBlock"
+msgstr "Gehitu blokea"
+
+msgid "plugins.generic.customBlockManager.noneCreated"
+msgstr "Ez da bloke pertsonalizaturik sortu."
+
+msgid "plugins.generic.customBlock.content"
+msgstr "Edukia"
+
+msgid "plugins.generic.customBlock.nameSuffix"
+msgstr "(Bloke pertsonalizatua)"
+
+msgid "plugins.generic.customBlock.description"
+msgstr "Hau erabiltzaileak sortutako bloke bat da."
+
+msgid "plugins.generic.customBlock.nameRegEx"
+msgstr ""
+"Bloke pertsonalizatuaren izenak letrak, zenbakiak eta marratxoak/azpimarrak "
+"bakarrik izan ditzake."
+
+msgid "plugins.generic.customBlock.showName"
+msgstr "Erakutsi izena"
+
+msgid "plugins.generic.customBlock.showName.description"
+msgstr "Erakutsi bloke honen izena blokearen edukiaren gainean."
+
+msgid "plugins.generic.customBlock.nameRequired"
+msgstr "Bloke pertsonalizatuaren izena beharrezkoa da."
