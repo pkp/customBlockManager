@@ -165,7 +165,3 @@ class CustomBlockManagerPlugin extends GenericPlugin
         return !Application::get()->getRequest()->getContext();
     }
 }
-
-if (!PKP_STRICT_MODE) {
-    class_alias('\APP\plugins\generic\customBlockManager\CustomBlockManagerPlugin', '\CustomBlockManagerPlugin');
-}
