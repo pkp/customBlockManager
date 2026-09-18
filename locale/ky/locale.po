@@ -1,0 +1,59 @@
+# Mahmut  VURAL <mahmut.vural@outlook.com>, 2026.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2026-07-12 11:38+0000\n"
+"Last-Translator: Mahmut  VURAL <mahmut.vural@outlook.com>\n"
+"Language-Team: Kyrgyz <http://translate.pkp.sfu.ca/projects/plugins/"
+"custom-block-manager-plugin/ky/>\n"
+"Language: ky\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 4.18.2\n"
+
+msgid "plugins.generic.customBlockManager.customBlocks"
+msgstr "Ыңгайлаштырылган блоктор"
+
+msgid "plugins.generic.customBlockManager.blockName"
+msgstr "Блоктун аты"
+
+msgid "plugins.generic.customBlockManager.noneCreated"
+msgstr "Эч кандай ыңгайлаштырылган блок түзүлгөн эмес."
+
+msgid "plugins.generic.customBlock.content"
+msgstr "Мазмуну"
+
+msgid "plugins.generic.customBlock.nameSuffix"
+msgstr "(Ыңгайлаштырылган блок)"
+
+msgid "plugins.generic.customBlock.nameRequired"
+msgstr "Ыңгайлаштырылган блоктун аты талап кылынат."
+
+msgid "plugins.generic.customBlock.nameRegEx"
+msgstr ""
+"Ыңгайлаштырылган блоктун аты тамгалардан, сандардан жана дефис/астын "
+"сызыктан гана турушу керек."
+
+msgid "plugins.generic.customBlock.showName"
+msgstr "Атын көрсөтүү"
+
+msgid "plugins.generic.customBlock.showName.description"
+msgstr "Бул блоктун атын блоктун мазмунунун үстүндө көрсөтүү."
+
+msgid "plugins.generic.customBlockManager.displayName"
+msgstr "Ыңгайлаштырылган блок башкаруучусу"
+
+msgid "plugins.generic.customBlockManager.manage"
+msgstr "Ыңгайлаштырылган блокторду башкаруу"
+
+msgid "plugins.generic.customBlockManager.addBlock"
+msgstr "Блок кошуу"
+
+msgid "plugins.generic.customBlock.description"
+msgstr "Бул колдонуучу түзгөн блок."
+
+msgid "plugins.generic.customBlockManager.description"
+msgstr ""
+"Бул плагин сизге ыңгайлаштырылган каптал панель блокторун башкарууга (кошуу, "
+"түзөтүү жана жоюу) мүмкүндүк берет."
